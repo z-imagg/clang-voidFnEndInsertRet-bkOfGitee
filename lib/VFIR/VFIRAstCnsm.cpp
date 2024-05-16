@@ -90,7 +90,6 @@ reinterpret_cast<uintptr_t> ( (fnVst.mRewriter_ptr.get()) ) ) << std::endl;
      }
      //只处理MainFile中的声明
      this->fnVst.TraverseDecl(D);
-     this->varDeclVst.TraverseDecl(D);
    }
    //endregion
 
@@ -103,14 +102,7 @@ reinterpret_cast<uintptr_t> ( (fnVst.mRewriter_ptr.get()) ) ) << std::endl;
 
    //endregion
 
-   //断言两个Vst中的rewriter是同一个对象
-   MyAssert(varDeclVst.mRewriter_ptr==fnVst.mRewriter_ptr,"[AssertErr]NotFit:varDeclVst.mRewriter_ptr==fnVst.mRewriter_ptr")
-
    ///region 4. 应用修改到源文件
-   //如果 花括号遍历器 确实有进行过至少一次插入花括号 , 才应用修改到源文件
-   if( !(varDeclVst.VFIRDeclLocIdSet.empty()) ){
-   varDeclVst.mRewriter_ptr->overwriteChangedFiles();
-   }
    if( !(fnVst.funcEnterLocIdSet.empty()) ){
    fnVst.mRewriter_ptr->overwriteChangedFiles();
    }
