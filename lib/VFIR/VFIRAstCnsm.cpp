@@ -103,7 +103,7 @@ reinterpret_cast<uintptr_t> ( (fnVst.mRewriter_ptr.get()) ) ) << std::endl;
    //endregion
 
    ///region 4. 应用修改到源文件
-   if( !(fnVst.funcEnterLocIdSet.empty()) ){
+   if( !(fnVst.funcReturnLocIdSet.empty()) ){
    fnVst.mRewriter_ptr->overwriteChangedFiles();
    }
      DiagnosticsEngine &Diags = CI.getDiagnostics();
