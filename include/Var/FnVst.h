@@ -27,15 +27,16 @@ public:
     explicit FnVst(CompilerInstance &CI, const std::shared_ptr<Rewriter> rewriter_ptr, ASTContext *Ctx, SourceManager& SM, LangOptions &_langOptions)
     //Rewriter:5:  Consumer将Rewriter传递给Visitor, 并由Visitor.mRewriter接收
     : mRewriter_ptr(rewriter_ptr),
-    Ctx(Ctx),
+    Ctx(Ctx),CtxRef(*Ctx),
     CI(CI),
     SM(SM)
     {
 
     }
 
-    bool insertBefore_X__funcReturn(LocId retBgnLocId, SourceLocation retBgnLoc  );
+    bool insertBefore_X__funcReturn(LocId cmpndStmRBrcLocId, SourceLocation cmpndStmRBrcLoc  );
     bool insertAfterFnLeftBrace__insertBeforeFnRightBrace(LocId fnBdLBrcLocId, SourceLocation funcBodyLBraceLoc , SourceLocation funcBodyRBraceLoc );
+    bool TraverseCompoundStmt(CompoundStmt *compoundStmt  );
     virtual bool TraverseFunctionDecl(FunctionDecl* funcDecl);
     bool TraverseCXXConstructorDecl(CXXConstructorDecl* cxxCnstrDecl);
     bool TraverseCXXMethodDecl(CXXMethodDecl* cxxMethDecl);
@@ -67,6 +68,7 @@ public:
 
 public:
     ASTContext *Ctx;
+    ASTContext& CtxRef;
     CompilerInstance& CI;
     SourceManager& SM;
 
