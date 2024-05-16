@@ -63,7 +63,7 @@ bool FnVst::TraverseCompoundStmt(CompoundStmt *compoundStmt  ){
   //若 有 栈变量释放 且 未曾插入过 释放语句，则插入释放语句
   if(!compoundEndStmtIsReturn){
 
-      LocId compoundStmtRBracLocId=LocId::buildFor(filePath, "", compoundStmtRBracLoc, SM);
+      LocId compoundStmtRBracLocId=LocId::buildFor(filePath,  compoundStmtRBracLoc, SM);
   ///1.7  在上面算出的位置处, 插入释放语句
     bool insertResult=insertBefore_Return(
             compoundStmtRBracLocId,
@@ -79,7 +79,6 @@ bool FnVst::insertBefore_Return(LocId cmpndStmRBrcLocId, SourceLocation cmpndStm
     std::string cStr_destroy=fmt::format(
             "return; /* voidFnEndInsertRet: {}*/",
             cmpndStmRBrcLocId.filePath,
-            cmpndStmRBrcLocId.funcName,
             cmpndStmRBrcLocId.to_string()
     );
     llvm::StringRef strRef_destroy(cStr_destroy);

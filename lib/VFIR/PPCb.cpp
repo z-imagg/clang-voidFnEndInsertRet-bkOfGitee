@@ -33,7 +33,7 @@ using namespace clang;
       //endregion
 
       //region 收集 #include指令 位置
-      InclusionDirectiveLocSet.insert(LocId::buildFor(filePath,"",HashLoc,SM));
+      InclusionDirectiveLocSet.insert(LocId::buildFor(filePath ,HashLoc,SM));
 //      std::cout << "Include指令:" << FileName.str() << std::endl;//开发打印日志
       //endregion
     }
@@ -60,7 +60,7 @@ using namespace clang;
       //endregion
 
       //region 收集 #define定义 位置
-      MacroDefinedLocSet.insert(LocId::buildFor(filePath,"",macroNameTkLoc,SM));
+      MacroDefinedLocSet.insert(LocId::buildFor(filePath, macroNameTkLoc,SM));
 //      std::cout << "宏定义:" << MacroNameTok.getIdentifierInfo()->getName().str() << std::endl;//开发打印日志
       //endregion
     }
