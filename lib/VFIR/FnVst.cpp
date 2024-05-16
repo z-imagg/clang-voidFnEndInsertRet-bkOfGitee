@@ -27,6 +27,7 @@ bool FnVst::TraverseCompoundStmt(CompoundStmt *compoundStmt  ){
         return false;
     }
 
+//    Util::printStmt(CtxRef, CI, "进入TraverseCompoundStmt", "", compoundStmt, false);  //开发用打印
     //获取主文件ID,文件路径
     FileID mainFileId;
     std::string filePath;
@@ -45,7 +46,7 @@ bool FnVst::TraverseCompoundStmt(CompoundStmt *compoundStmt  ){
     bool care=(only1P && (parentNKIsFunctionDecl || parentNKIsCXXMethodDecl || parentNKIsCXXConstructorDecl || parentNKIsCXXDestructorDecl));
     //若不关注 则直接返回
     if (!care){
-        return false;
+        return true;
     }
 /////////////////////对当前节点compoundStmt做 自定义处理
   //region 0.准备、开发用语句
@@ -69,7 +70,7 @@ bool FnVst::TraverseCompoundStmt(CompoundStmt *compoundStmt  ){
   bool compoundEndStmtIsReturn=Util::isReturnStmtClass(endStmt);
 
   //若 有 栈变量释放 且 未曾插入过 释放语句，则插入释放语句
-  if(compoundEndStmtIsReturn){
+  if(!compoundEndStmtIsReturn){
 
       LocId compoundStmtRBracLocId=LocId::buildFor(filePath, "", compoundStmtRBracLoc, SM);
   ///1.7  在上面算出的位置处, 插入释放语句
@@ -89,7 +90,7 @@ bool FnVst::TraverseCompoundStmt(CompoundStmt *compoundStmt  ){
 bool FnVst::insertBefore_Return(LocId cmpndStmRBrcLocId, SourceLocation cmpndStmRBrcLoc  ){
     //region 构造插入语句
     std::string cStr_destroy=fmt::format(
-            "return; /* 销毁函数变量列表, {}*/",
+            "return; /* voidFnEndInsertRet: {}*/",
             cmpndStmRBrcLocId.filePath,
             cmpndStmRBrcLocId.funcName,
             cmpndStmRBrcLocId.to_string()
