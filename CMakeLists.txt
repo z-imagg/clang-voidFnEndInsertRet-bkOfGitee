@@ -58,7 +58,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/bin")
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/lib")
 
 # 添加子模块
-add_subdirectory(VarPlugin)
+add_subdirectory(VFIRPlugin)
 add_subdirectory(VFIRAlone)
 add_subdirectory(TestAlone)
 add_subdirectory(test_in)

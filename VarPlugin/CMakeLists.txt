@@ -17,17 +17,17 @@ set(VFIR_SOURCES
 
     # Create a library corresponding to 'plugin'
     add_library(
-            VarPlugin
+            VFIRPlugin
       SHARED
       ${VFIR_SOURCES}
       )
 
-target_link_libraries(VarPlugin
+target_link_libraries(VFIRPlugin
         "${LIBFMT_STATIC}"   #/pubx/fmt/build/libfmt.a
         )
 
     # Configure include directories for 'plugin'
-    target_include_directories(VarPlugin
+    target_include_directories(VFIRPlugin
       PRIVATE
     "${CMAKE_CURRENT_SOURCE_DIR}/../include"
     "${CMAKE_CURRENT_SOURCE_DIR}/../base_home/include"
