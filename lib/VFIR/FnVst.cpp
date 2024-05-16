@@ -48,17 +48,9 @@ bool FnVst::TraverseCompoundStmt(CompoundStmt *compoundStmt  ){
         return true;
     }
 /////////////////////对当前节点compoundStmt做 自定义处理
-  //region 0.准备、开发用语句
-//  int64_t compoundStmtID = compoundStmt->getID(*Ctx);
-//  const Stmt::child_range &subStmtLs = compoundStmt->children();
-
-//  const std::string &compoundStmtText = Util::getSourceTextBySourceRange(compoundStmt->getSourceRange(), SM, CI.getLangOpts());
-//
-//  std::vector<clang::Stmt*> subStmtVec(subStmtLs.begin(), subStmtLs.end());
-//  unsigned long subStmtCnt = subStmtVec.size();
 
 
-  ///1.2 块尾释放语句默认插入位置是 组合语句 右花括号} 前
+  ///1.2 return语句插入位置是 组合语句 右花括号} 前
   SourceLocation insertLoc=compoundStmt->getRBracLoc();
 
   Stmt *endStmt = compoundStmt->body_back();
@@ -76,12 +68,8 @@ bool FnVst::TraverseCompoundStmt(CompoundStmt *compoundStmt  ){
     bool insertResult=insertBefore_Return(
             compoundStmtRBracLocId,
             compoundStmtRBracLoc);
-//    std::string title=fmt::format("插入结果:{},RwtPtr:{:x}",    insertResult,reinterpret_cast<uintptr_t> (mRewriter_ptr.get() ) );
-//    Util::printStmt(*Ctx, CI, "TraverseCompoundStmt插入块释放", title, compoundStmt, false);  //开发用打印
 
   }
-  //endregion
-
 
   return true;
 }
