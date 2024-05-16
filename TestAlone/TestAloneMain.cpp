@@ -82,7 +82,7 @@ int main() {
   //endregion
 
   //region 设置语言为C++
-  CI.getLangOpts().CPlusPlus = true;
+  CI.getLangOpts().CPlusPlus11 = true;
   //endregion
 
   //region 设置目标平台
@@ -131,7 +131,7 @@ int main() {
 //  PP.EnterSourceFile()
 
   //region 添加输入源码文件
-  FrontendInputFile srcFile = clang::FrontendInputFile("/pubx/clang-voidFnEndInsertRet/test_in/test_main.cpp", clang::InputKind(clang::Language::CXX));
+  FrontendInputFile srcFile = clang::FrontendInputFile("/fridaAnlzAp/clang-voidFnEndInsertRet/test_in/test_main.cpp", clang::InputKind(clang::Language::CXX));
   CI.getFrontendOpts().Inputs.push_back(srcFile);
   //endregion
 
