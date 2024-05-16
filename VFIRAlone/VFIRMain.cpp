@@ -43,7 +43,7 @@ private:
 
 int main(int Argc, const char **Argv) {
   const std::unique_ptr<tooling::FrontendActionFactory> &frontendActionFactory = clang::tooling::newFrontendActionFactory<_VFIRAstAct>();
-  int Result =   act_main(Argc,Argv,VFIRAloneCategory,frontendActionFactory,"加花括号插件", false);
+  int Result =   act_main(Argc,Argv,VFIRAloneCategory,frontendActionFactory,"[clang插件]'void函数末尾无return时候，补充return语句'", false);
   return Result;
 }
 
