@@ -1,4 +1,4 @@
-#include "VFIR/CollectIncMacro_PPCb.h"
+#include "VFIR/PPCb.h"
 #include "clang/Frontend/FrontendActions.h"
 #include "clang/Frontend/CompilerInstance.h"
 #include "llvm/Support/raw_ostream.h"
@@ -12,7 +12,7 @@
 using namespace clang;
 
     //预处理回调收集#includee 以判断case起止范围内 有无#i
-    void CollectIncMacro_PPCb::InclusionDirective(SourceLocation HashLoc, const Token &IncludeTok, StringRef FileName, bool IsAngled,
+    void PPCb::InclusionDirective(SourceLocation HashLoc, const Token &IncludeTok, StringRef FileName, bool IsAngled,
                             CharSourceRange FilenameRange, Optional<FileEntryRef> File, StringRef SearchPath,
                             StringRef RelativePath, const Module *Imported,
                             SrcMgr::CharacteristicKind FileType)   {
@@ -39,7 +39,7 @@ using namespace clang;
     }
 
     //预处理回调收集#define 以判断case起止范围内 有无#d
-    void CollectIncMacro_PPCb::MacroDefined(const clang::Token& MacroNameTok,
+    void PPCb::MacroDefined(const clang::Token& MacroNameTok,
                               const clang::MacroDirective* MD)   {
       //region 方便变量
       const clang::MacroInfo* MI = MD->getMacroInfo();
@@ -66,10 +66,10 @@ using namespace clang;
     }
 
     //判断给定起止范围内 有无#include
-    bool CollectIncMacro_PPCb::hasInclusionDirective(SourceManager& SM, SourceRange range){
+    bool PPCb::hasInclusionDirective(SourceManager& SM, SourceRange range){
       bool hasIncDInRange=std::any_of(
-              CollectIncMacro_PPCb::InclusionDirectiveLocSet.begin(),
-              CollectIncMacro_PPCb::InclusionDirectiveLocSet.end(),
+              PPCb::InclusionDirectiveLocSet.begin(),
+              PPCb::InclusionDirectiveLocSet.end(),
               [&range,&SM](LocId locIdK){
                   return locIdK.containedByRange(SM,range);
               }
@@ -78,10 +78,10 @@ using namespace clang;
     }
 
     //判断给定起止范围内 有无#define
-    bool CollectIncMacro_PPCb::hasMacroDefined(SourceManager& SM, SourceRange range){
+    bool PPCb::hasMacroDefined(SourceManager& SM, SourceRange range){
       bool hasMacroDInRange=std::any_of(
-              CollectIncMacro_PPCb::MacroDefinedLocSet.begin(),
-              CollectIncMacro_PPCb::MacroDefinedLocSet.end(),
+              PPCb::MacroDefinedLocSet.begin(),
+              PPCb::MacroDefinedLocSet.end(),
               [&range,&SM](LocId locIdK){
                   return locIdK.containedByRange(SM,range);
               }
@@ -89,14 +89,14 @@ using namespace clang;
       return hasMacroDInRange;
     }
 
-std::unordered_set<LocId,LocId> CollectIncMacro_PPCb::InclusionDirectiveLocSet;
-std::unordered_set<LocId,LocId> CollectIncMacro_PPCb::MacroDefinedLocSet;
+std::unordered_set<LocId,LocId> PPCb::InclusionDirectiveLocSet;
+std::unordered_set<LocId,LocId> PPCb::MacroDefinedLocSet;
 
 
 ////program
 
 //如果本源文件中根本没有#pragma ，则方法PragmaMessage不会被调用
-    void CollectIncMacro_PPCb::PragmaMessage(SourceLocation Loc, StringRef namespaceSR, PPCallbacks::PragmaMessageKind msgKind, StringRef msgSR) {
+    void PPCb::PragmaMessage(SourceLocation Loc, StringRef namespaceSR, PPCallbacks::PragmaMessageKind msgKind, StringRef msgSR) {
         //region 方便变量
         SourceManager &SM = CI.getSourceManager();
         //endregion
@@ -121,7 +121,7 @@ std::unordered_set<LocId,LocId> CollectIncMacro_PPCb::MacroDefinedLocSet;
         auto msg=msgSR.str();
         auto namespac=namespaceSR.str();
 
-        auto msgFull=CollectIncMacro_PPCb::pragmaMsgFull(namespac,msg);
+        auto msgFull=PPCb::pragmaMsgFull(namespac,msg);
 
         pragma_message_set.insert(msgFull);
         std::cout << fmt::format("namespaceSR:{} , msgSR:{}, msgKind:{}, msgFull:{}\n", namespaceSR.str(), msgSR.str() , (int)msgKind, msgFull) ;
@@ -130,4 +130,4 @@ std::unordered_set<LocId,LocId> CollectIncMacro_PPCb::MacroDefinedLocSet;
     }
 
 
-std::set<std::string> CollectIncMacro_PPCb::pragma_message_set;
+std::set<std::string> PPCb::pragma_message_set;

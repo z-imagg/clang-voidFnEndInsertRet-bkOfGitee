@@ -14,7 +14,7 @@
 
 #include "base/Util.h"
 #include "VFIR/RangeHasMacroAstVst.h"
-#include "VFIR/CollectIncMacro_PPCb.h"
+#include "VFIR/PPCb.h"
 
 
 using namespace clang;
@@ -64,7 +64,7 @@ public:
       mRewriter_ptr->setSourceMgr(SM, langOptions);
 
       // Act中 添加 收集#include、#define的 预处理回调
-      PP.addPPCallbacks(std::make_unique<CollectIncMacro_PPCb>(CI));
+      PP.addPPCallbacks(std::make_unique<PPCb>(CI));
 
       
       return std::make_unique<MyASTConsumer>(CI,mRewriter_ptr);

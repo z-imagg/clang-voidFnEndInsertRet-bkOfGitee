@@ -9,7 +9,7 @@ set(VFIR_SOURCES
 "${CMAKE_CURRENT_SOURCE_DIR}/../base_home/impl/base/LocId.cpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/../lib/VFIR/FnVst.cpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/../lib/VFIR/RangeHasMacroAstVst.cpp"
-"${CMAKE_CURRENT_SOURCE_DIR}/../lib/VFIR/CollectIncMacro_PPCb.cpp"
+"${CMAKE_CURRENT_SOURCE_DIR}/../lib/VFIR/PPCb.cpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/../lib/VFIR/VFIRAstCnsm.cpp"
 )
 

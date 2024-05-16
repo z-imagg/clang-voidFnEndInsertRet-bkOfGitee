@@ -1,6 +1,6 @@
 
-#ifndef CollectIncMacro_PPCb_H
-#define CollectIncMacro_PPCb_H
+#ifndef PPCb_H
+#define PPCb_H
 #include "clang/Frontend/FrontendActions.h"
 #include "clang/Frontend/CompilerInstance.h"
 #include "base/LocId.h"
@@ -10,14 +10,14 @@
 
 using namespace clang;
 
-class CollectIncMacro_PPCb : public clang::PPCallbacks {
+class PPCb : public clang::PPCallbacks {
 public:
     CompilerInstance &CI;
 
     static std::unordered_set<LocId,LocId> InclusionDirectiveLocSet;
     static std::unordered_set<LocId,LocId> MacroDefinedLocSet;
 
-    explicit CollectIncMacro_PPCb(CompilerInstance &_CI) : CI(_CI) {
+    explicit PPCb(CompilerInstance &_CI) : CI(_CI) {
 
     }
 
@@ -56,4 +56,4 @@ public:
 };
 
 
-#endif //CollectIncMacro_PPCb_H
+#endif //PPCb_H

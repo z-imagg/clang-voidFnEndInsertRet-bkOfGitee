@@ -1,5 +1,5 @@
 #include "VFIR/VFIRAstCnsm.h"
-#include "VFIR/CollectIncMacro_PPCb.h"
+#include "VFIR/PPCb.h"
 #include "VFIR/Constant.h"
 
 #include "base/MyAssert.h"
@@ -71,7 +71,7 @@ reinterpret_cast<uintptr_t> ( (fnVst.mRewriter_ptr.get()) ) ) << std::endl;
    ///region 1.若本文件已处理，则直接返回。
  {
 
-     bool hasPragmaMsg = CollectIncMacro_PPCb::pragma_message_set.find(c.NameSpace_funcIdAsmIns) != CollectIncMacro_PPCb::pragma_message_set.end();
+     bool hasPragmaMsg = PPCb::pragma_message_set.find(c.NameSpace_funcIdAsmIns) != PPCb::pragma_message_set.end();
      if(hasPragmaMsg){
          //若已经有#include "funcIdBase.h"，则标记为已处理，且直接返回，不做任何处理。
          std::cout << fmt::format("跳过，因为此文件已经被处理, 文件路径:{} 已经包含#pragma消息 {}\n",filePath,c.PrgMsgStmt_funcIdAsmIns) ;

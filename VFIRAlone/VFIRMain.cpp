@@ -8,7 +8,7 @@
 #include "clang/Lex/PreprocessorOptions.h"
 #include "VFIR/VFIRAstCnsm.h"
 #include "base/ActMain.h"
-#include "VFIR/CollectIncMacro_PPCb.h"
+#include "VFIR/PPCb.h"
 
 using namespace llvm;
 using namespace clang;
@@ -30,7 +30,7 @@ public:
 
 
       // Act中 添加 收集#include、#define、#program的 预处理回调
-      PP.addPPCallbacks(std::make_unique<CollectIncMacro_PPCb>(CI));
+      PP.addPPCallbacks(std::make_unique<PPCb>(CI));
 
       //Act中 是 每次都是 新创建 AddBraceAstCnsm
       return std::make_unique<VFIRAstCnsm>(CI,mRewriter_ptr, &astContext, SM, langOptions);
