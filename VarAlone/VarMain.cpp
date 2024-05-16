@@ -13,7 +13,7 @@
 using namespace llvm;
 using namespace clang;
 
-static llvm::cl::OptionCategory VarAloneCategory("VarAlone选项");
+static llvm::cl::OptionCategory VFIRAloneCategory("VFIRAlone选项");
 
 class _VarAstAct : public ASTFrontendAction {
 public:
@@ -43,7 +43,7 @@ private:
 
 int main(int Argc, const char **Argv) {
   const std::unique_ptr<tooling::FrontendActionFactory> &frontendActionFactory = clang::tooling::newFrontendActionFactory<_VarAstAct>();
-  int Result =   act_main(Argc,Argv,VarAloneCategory,frontendActionFactory,"加花括号插件", false);
+  int Result =   act_main(Argc,Argv,VFIRAloneCategory,frontendActionFactory,"加花括号插件", false);
   return Result;
 }
 

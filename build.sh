@@ -48,23 +48,23 @@ BUILD_HOME=$REPO_HOME/build/
 
 {
 #构建的Release版本 : build_release_0.sh
-# LIB_Var_CXX_FLAGS="  "
+# LIB_VFIR_CXX_FLAGS="  "
 # -rwxrwxr-x 1 zz zz 874K  7月 24 13:13 /bal/clang-add-funcIdAsm/build/lib/libVar.so
 
 #构建的Release版本,带调试信息(变量名称和行号),  当出现问题方便排查: build_release_1.sh
-LIB_Var_CXX_FLAGS=" -fno-omit-frame-pointer -Wall   -O0    -g1"
+LIB_VFIR_CXX_FLAGS=" -fno-omit-frame-pointer -Wall   -O0    -g1"
 # -rwxrwxr-x 1 zz zz 4.6M  7月 24 14:50 lib/libVar.so
 
 #构建的Release版本,带调试信息(变量名称和行号、局部变量),  当出现问题方便排查:  build_release_2.sh
-# LIB_Var_CXX_FLAGS=" -fno-omit-frame-pointer -Wall   -O0    -g2"
+# LIB_VFIR_CXX_FLAGS=" -fno-omit-frame-pointer -Wall   -O0    -g2"
 # -rwxrwxr-x 1 zz zz 27M  7月 24 15:03 /bal/clang-add-funcIdAsm/build/lib/libVar.so
 
-cmake -S $REPO_HOME -B $BUILD_HOME  -DCMAKE_BUILD_TYPE=Release   -DCMAKE_CXX_FLAGS="$LIB_Var_CXX_FLAGS"   -DCMAKE_C_FLAGS="$LIB_Var_CXX_FLAGS"    && \
+cmake -S $REPO_HOME -B $BUILD_HOME  -DCMAKE_BUILD_TYPE=Release   -DCMAKE_CXX_FLAGS="$LIB_VFIR_CXX_FLAGS"   -DCMAKE_C_FLAGS="$LIB_VFIR_CXX_FLAGS"    && \
 #-DCMAKE_VERBOSE_MAKEFILE=True
 ( cd $BUILD_HOME && make -j8 ;) && \
 ls -lh $BUILD_HOME/lib/lib*.so ;}
 
-$BUILD_HOME/bin/VarAlone $REPO_HOME/test_in/test_main.cpp  && echo "TEST_OK"
+$BUILD_HOME/bin/VFIRAlone $REPO_HOME/test_in/test_main.cpp  && echo "TEST_OK"
 
 ## 构建Release版本且有带局部变量名字的调试信息 以定位问题
 #> GCC  调试信息不同级别选项 ：

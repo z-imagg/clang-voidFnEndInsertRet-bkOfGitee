@@ -2,7 +2,7 @@
 # ======================================================
 
 
-set(Var_SOURCES
+set(VFIR_SOURCES
 "${CMAKE_CURRENT_SOURCE_DIR}/../lib/VFIR/VarAstAct.cpp"
 
 "${CMAKE_CURRENT_SOURCE_DIR}/../base_home/impl/base/Util.cpp"
@@ -19,7 +19,7 @@ set(Var_SOURCES
     add_library(
             VarPlugin
       SHARED
-      ${Var_SOURCES}
+      ${VFIR_SOURCES}
       )
 
 target_link_libraries(VarPlugin

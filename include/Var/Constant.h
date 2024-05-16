@@ -1,6 +1,6 @@
 
-#ifndef Var_CONSTANT_H
-#define Var_CONSTANT_H
+#ifndef VFIR_CONSTANT_H
+#define VFIR_CONSTANT_H
 #include <string>
 
 
@@ -12,4 +12,4 @@ public:
     const   std::string NameSpace_funcIdAsmIns = ":VarBE_inserted";
 
 };
-#endif //Var_CONSTANT_H
+#endif //VFIR_CONSTANT_H
