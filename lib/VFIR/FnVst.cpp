@@ -5,7 +5,6 @@
 #include "clang/Frontend/CompilerInstance.h"
 #include "clang/Frontend/FrontendPluginRegistry.h"
 #include "base/Util.h"
-#include "VFIR/RangeHasMacroAstVst.h"
 #include <vector>
 
 #include <fmt/core.h>

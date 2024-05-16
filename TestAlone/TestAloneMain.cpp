@@ -13,7 +13,6 @@
 #include <iostream>
 
 #include "base/Util.h"
-#include "VFIR/RangeHasMacroAstVst.h"
 #include "VFIR/PPCb.h"
 
 
