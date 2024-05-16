@@ -108,7 +108,7 @@ reinterpret_cast<uintptr_t> ( (fnVst.mRewriter_ptr.get()) ) ) << std::endl;
 
    ///region 4. 应用修改到源文件
    //如果 花括号遍历器 确实有进行过至少一次插入花括号 , 才应用修改到源文件
-   if( !(varDeclVst.VarDeclLocIdSet.empty()) ){
+   if( !(varDeclVst.VFIRDeclLocIdSet.empty()) ){
    varDeclVst.mRewriter_ptr->overwriteChangedFiles();
    }
    if( !(fnVst.funcEnterLocIdSet.empty()) ){

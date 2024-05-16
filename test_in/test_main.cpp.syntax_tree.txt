@@ -29,9 +29,9 @@ TranslationUnitDecl 0x5d6d88f0b728 <<invalid sloc>> <invalid sloc>
 | |-CXXConstructorDecl 0x5d6d88f76350 <line:5:8> col:8 implicit used Point 'void () noexcept' inline default trivial
 | | `-CompoundStmt 0x5d6d88f767a8 <col:8>
 | |-CXXConstructorDecl 0x5d6d88f76458 <col:8> col:8 implicit constexpr Point 'void (const Point &)' inline default trivial noexcept-unevaluated 0x5d6d88f76458
-| | `-ParmVarDecl 0x5d6d88f76568 <col:8> col:8 'const Point &'
+| | `-ParmVFIRDecl 0x5d6d88f76568 <col:8> col:8 'const Point &'
 | `-CXXConstructorDecl 0x5d6d88f76618 <col:8> col:8 implicit constexpr Point 'void (Point &&)' inline default trivial noexcept-unevaluated 0x5d6d88f76618
-|   `-ParmVarDecl 0x5d6d88f76728 <col:8> col:8 'Point &&'
+|   `-ParmVFIRDecl 0x5d6d88f76728 <col:8> col:8 'Point &&'
 |-CXXRecordDecl 0x5d6d88f520e0 <line:9:1, col:18> col:7 referenced class UserEntity definition
 | |-DefinitionData pass_in_registers empty aggregate standard_layout trivially_copyable pod trivial literal has_constexpr_non_copy_move_ctor can_const_default_init
 | | |-DefaultConstructor exists trivial constexpr defaulted_is_constexpr
@@ -44,9 +44,9 @@ TranslationUnitDecl 0x5d6d88f0b728 <<invalid sloc>> <invalid sloc>
 | |-CXXConstructorDecl 0x5d6d88f73d80 <col:7> col:7 implicit used constexpr UserEntity 'void () noexcept' inline default trivial
 | | `-CompoundStmt 0x5d6d88f74238 <col:7>
 | |-CXXConstructorDecl 0x5d6d88f73eb8 <col:7> col:7 implicit constexpr UserEntity 'void (const UserEntity &)' inline default trivial noexcept-unevaluated 0x5d6d88f73eb8
-| | `-ParmVarDecl 0x5d6d88f73fc8 <col:7> col:7 'const UserEntity &'
+| | `-ParmVFIRDecl 0x5d6d88f73fc8 <col:7> col:7 'const UserEntity &'
 | `-CXXConstructorDecl 0x5d6d88f74078 <col:7> col:7 implicit constexpr UserEntity 'void (UserEntity &&)' inline default trivial noexcept-unevaluated 0x5d6d88f74078
-|   `-ParmVarDecl 0x5d6d88f74188 <col:7> col:7 'UserEntity &&'
+|   `-ParmVFIRDecl 0x5d6d88f74188 <col:7> col:7 'UserEntity &&'
 |-CXXRecordDecl 0x5d6d88f522a0 <line:10:1, col:21> col:7 referenced class ScoreRelation definition
 | |-DefinitionData pass_in_registers empty aggregate standard_layout trivially_copyable pod trivial literal has_constexpr_non_copy_move_ctor can_const_default_init
 | | |-DefaultConstructor exists trivial constexpr defaulted_is_constexpr
@@ -59,9 +59,9 @@ TranslationUnitDecl 0x5d6d88f0b728 <<invalid sloc>> <invalid sloc>
 | |-CXXConstructorDecl 0x5d6d88f74408 <col:7> col:7 implicit used constexpr ScoreRelation 'void () noexcept' inline default trivial
 | | `-CompoundStmt 0x5d6d88f74858 <col:7>
 | |-CXXConstructorDecl 0x5d6d88f74508 <col:7> col:7 implicit constexpr ScoreRelation 'void (const ScoreRelation &)' inline default trivial noexcept-unevaluated 0x5d6d88f74508
-| | `-ParmVarDecl 0x5d6d88f74618 <col:7> col:7 'const ScoreRelation &'
+| | `-ParmVFIRDecl 0x5d6d88f74618 <col:7> col:7 'const ScoreRelation &'
 | `-CXXConstructorDecl 0x5d6d88f746c8 <col:7> col:7 implicit constexpr ScoreRelation 'void (ScoreRelation &&)' inline default trivial noexcept-unevaluated 0x5d6d88f746c8
-|   `-ParmVarDecl 0x5d6d88f747d8 <col:7> col:7 'ScoreRelation &&'
+|   `-ParmVFIRDecl 0x5d6d88f747d8 <col:7> col:7 'ScoreRelation &&'
 |-CXXRecordDecl 0x5d6d88f52460 <line:11:1, line:76:1> line:11:7 referenced class MyClass definition
 | |-DefinitionData pass_in_registers empty aggregate standard_layout trivially_copyable pod trivial literal has_constexpr_non_copy_move_ctor can_const_default_init
 | | |-DefaultConstructor exists trivial constexpr defaulted_is_constexpr
@@ -72,34 +72,34 @@ TranslationUnitDecl 0x5d6d88f0b728 <<invalid sloc>> <invalid sloc>
 | | `-Destructor simple irrelevant trivial needs_implicit
 | |-CXXRecordDecl 0x5d6d88f52578 <col:1, col:7> col:7 implicit class MyClass
 | |-AccessSpecDecl 0x5d6d88f52608 <line:12:1, col:7> col:1 public
-| |-VarDecl 0x5d6d88f52648 <line:13:5, col:16> col:16 ZERO 'int' static
+| |-VFIRDecl 0x5d6d88f52648 <line:13:5, col:16> col:16 ZERO 'int' static
 | |-AccessSpecDecl 0x5d6d88f526b0 <line:14:1, col:7> col:1 public
 | |-CXXMethodDecl 0x5d6d88f52880 <line:16:3, line:75:3> line:16:9 switchDemo 'char *(int, short)' implicit-inline
-| | |-ParmVarDecl 0x5d6d88f526f0 <col:20, col:24> col:24 used cnt 'int'
-| | |-ParmVarDecl 0x5d6d88f52770 <col:29, col:35> col:35 used chr 'short'
+| | |-ParmVFIRDecl 0x5d6d88f526f0 <col:20, col:24> col:24 used cnt 'int'
+| | |-ParmVFIRDecl 0x5d6d88f52770 <col:29, col:35> col:35 used chr 'short'
 | | `-CompoundStmt 0x5d6d88f7a7d0 <col:39, line:75:3>
 | |   |-DeclStmt 0x5d6d88f52a18 <line:17:3, col:16>
-| |   | `-VarDecl 0x5d6d88f529b0 <col:3, col:8> col:8 myIntPtr 'int *'
+| |   | `-VFIRDecl 0x5d6d88f529b0 <col:3, col:8> col:8 myIntPtr 'int *'
 | |   |-DeclStmt 0x5d6d88f52bb8 <line:18:3, col:13>
-| |   | |-VarDecl 0x5d6d88f52a40 <col:3, col:8> col:8 x 'char'
-| |   | |-VarDecl 0x5d6d88f52ab8 <col:3, col:10> col:10 y 'char'
-| |   | `-VarDecl 0x5d6d88f52b30 <col:3, col:12> col:12 z 'char'
+| |   | |-VFIRDecl 0x5d6d88f52a40 <col:3, col:8> col:8 x 'char'
+| |   | |-VFIRDecl 0x5d6d88f52ab8 <col:3, col:10> col:10 y 'char'
+| |   | `-VFIRDecl 0x5d6d88f52b30 <col:3, col:12> col:12 z 'char'
 | |   |-DeclStmt 0x5d6d88f73cd8 <line:19:3, col:18>
-| |   | |-VarDecl 0x5d6d88f52be8 <col:3, col:7> col:7 i1 'int'
-| |   | |-VarDecl 0x5d6d88f52c68 <col:3, col:10> col:10 i2 'int'
-| |   | `-VarDecl 0x5d6d88f73c50 <col:3, col:14> col:14 p_i3 'int *'
+| |   | |-VFIRDecl 0x5d6d88f52be8 <col:3, col:7> col:7 i1 'int'
+| |   | |-VFIRDecl 0x5d6d88f52c68 <col:3, col:10> col:10 i2 'int'
+| |   | `-VFIRDecl 0x5d6d88f73c50 <col:3, col:14> col:14 p_i3 'int *'
 | |   |-DeclStmt 0x5d6d88f74360 <line:20:3, col:19>
-| |   | `-VarDecl 0x5d6d88f73d00 <col:3, col:14> col:14 admin 'UserEntity' callinit
+| |   | `-VFIRDecl 0x5d6d88f73d00 <col:3, col:14> col:14 admin 'UserEntity' callinit
 | |   |   `-CXXConstructExpr 0x5d6d88f74338 <col:14> 'UserEntity' 'void () noexcept'
 | |   |-DeclStmt 0x5d6d88f74980 <line:21:3, col:27>
-| |   | `-VarDecl 0x5d6d88f74388 <col:3, col:17> col:17 scoreRlatn 'ScoreRelation' callinit
+| |   | `-VFIRDecl 0x5d6d88f74388 <col:3, col:17> col:17 scoreRlatn 'ScoreRelation' callinit
 | |   |   `-CXXConstructExpr 0x5d6d88f74958 <col:17> 'ScoreRelation' 'void () noexcept'
 | |   |-DeclStmt 0x5d6d88f74a18 <line:2:15, line:22:16>
-| |   | `-VarDecl 0x5d6d88f749b0 <line:2:15, line:22:9> col:9 num_int 'int'
+| |   | `-VFIRDecl 0x5d6d88f749b0 <line:2:15, line:22:9> col:9 num_int 'int'
 | |   |-DeclStmt 0x5d6d88f74ac8 <line:23:3, col:28>
-| |   | `-VarDecl 0x5d6d88f74a60 <col:3, col:18> col:18 num_double 'DOUBLE_typedef':'double'
+| |   | `-VFIRDecl 0x5d6d88f74a60 <col:3, col:18> col:18 num_double 'DOUBLE_typedef':'double'
 | |   |-DeclStmt 0x5d6d88f75da8 <line:24:3, col:24>
-| |   | `-VarDecl 0x5d6d88f74af8 <col:3, col:21> col:10 used sum 'double' cinit
+| |   | `-VFIRDecl 0x5d6d88f74af8 <col:3, col:21> col:10 used sum 'double' cinit
 | |   |   `-BinaryOperator 0x5d6d88f75d88 <col:14, col:21> 'double' '*'
 | |   |     |-BinaryOperator 0x5d6d88f74bd0 <col:14, col:17> 'double' '*'
 | |   |     | |-FloatingLiteral 0x5d6d88f74b60 <col:14> 'double' 1.000000e+00
@@ -111,10 +111,10 @@ TranslationUnitDecl 0x5d6d88f0b728 <<invalid sloc>> <invalid sloc>
 | |   |         `-ImplicitCastExpr 0x5d6d88f74c10 <col:21> 'short' <LValueToRValue>
 | |   |           `-DeclRefExpr 0x5d6d88f74bf0 <col:21> 'short' lvalue ParmVar 0x5d6d88f52770 'chr' 'short'
 | |   |-DeclStmt 0x5d6d88f75e40 <line:25:3, col:11>
-| |   | `-VarDecl 0x5d6d88f75dd8 <col:3, col:9> col:9 used PI 'float'
+| |   | `-VFIRDecl 0x5d6d88f75dd8 <col:3, col:9> col:9 used PI 'float'
 | |   |-LabelStmt 0x5d6d88f75f38 <line:26:5, col:18> 'start'
 | |   | `-DeclStmt 0x5d6d88f75ed0 <col:12, col:18>
-| |   |   `-VarDecl 0x5d6d88f75e68 <col:12, col:17> col:17 used L 'char'
+| |   |   `-VFIRDecl 0x5d6d88f75e68 <col:12, col:17> col:17 used L 'char'
 | |   |-SwitchStmt 0x5d6d88f75fa8 <line:27:5, line:73:5>
 | |   | |-ImplicitCastExpr 0x5d6d88f75f90 <line:27:12> 'int' <IntegralCast>
 | |   | | `-ImplicitCastExpr 0x5d6d88f75f78 <col:12> 'short' <LValueToRValue>
@@ -149,7 +149,7 @@ TranslationUnitDecl 0x5d6d88f0b728 <<invalid sloc>> <invalid sloc>
 | |   |   | | `-IntegerLiteral 0x5d6d88f76210 <col:12> 'int' 0
 | |   |   | `-CompoundStmt 0x5d6d88f76b38 <line:33:7, line:37:7>
 | |   |   |   |-DeclStmt 0x5d6d88f76910 <line:34:7, col:24>
-| |   |   |   | `-VarDecl 0x5d6d88f762d0 <col:7, col:20> col:20 pnt4 'struct Point':'Point' callinit
+| |   |   |   | `-VFIRDecl 0x5d6d88f762d0 <col:7, col:20> col:20 pnt4 'struct Point':'Point' callinit
 | |   |   |   |   `-CXXConstructExpr 0x5d6d88f768e8 <col:20> 'struct Point':'Point' 'void () noexcept'
 | |   |   |   |-BinaryOperator 0x5d6d88f76a68 <line:35:9, col:21> 'char' lvalue '='
 | |   |   |   | |-DeclRefExpr 0x5d6d88f76928 <col:9> 'char' lvalue VFIR 0x5d6d88f75e68 'L' 'char'
@@ -173,7 +173,7 @@ TranslationUnitDecl 0x5d6d88f0b728 <<invalid sloc>> <invalid sloc>
 | |   |   | | |-value: Int 1
 | |   |   | | `-IntegerLiteral 0x5d6d88f76b60 <col:12> 'int' 1
 | |   |   | `-DeclStmt 0x5d6d88f76c48 <line:41:9, col:38>
-| |   |   |   `-VarDecl 0x5d6d88f76be0 <col:9, col:34> col:34 used unit 'int'
+| |   |   |   `-VFIRDecl 0x5d6d88f76be0 <col:9, col:34> col:34 used unit 'int'
 | |   |   |-BinaryOperator 0x5d6d88f76ca0 <line:42:9, col:14> 'int' lvalue '='
 | |   |   | |-DeclRefExpr 0x5d6d88f76c60 <col:9> 'int' lvalue VFIR 0x5d6d88f76be0 'unit' 'int'
 | |   |   | `-IntegerLiteral 0x5d6d88f76c80 <col:14> 'int' 18
@@ -230,13 +230,13 @@ TranslationUnitDecl 0x5d6d88f0b728 <<invalid sloc>> <invalid sloc>
 | |   |   |   | |   `-DeclRefExpr 0x5d6d88f781a0 <col:13> 'char' lvalue VFIR 0x5d6d88f75e68 'L' 'char'
 | |   |   |   | `-GotoStmt 0x5d6d88f781f0 <col:17, col:22> 'start' 0x5d6d88f75ee8
 | |   |   |   `-DeclStmt 0x5d6d88f784f0 <line:56:7, col:44>
-| |   |   |     |-VarDecl 0x5d6d88f78248 <col:7, col:20> col:20 pnt5 'struct Point':'Point' callinit
+| |   |   |     |-VFIRDecl 0x5d6d88f78248 <col:7, col:20> col:20 pnt5 'struct Point':'Point' callinit
 | |   |   |     | `-CXXConstructExpr 0x5d6d88f782b0 <col:20> 'struct Point':'Point' 'void () noexcept'
-| |   |   |     |-VarDecl 0x5d6d88f782f8 <col:7, col:25> col:25 pnt6 'struct Point':'Point' callinit
+| |   |   |     |-VFIRDecl 0x5d6d88f782f8 <col:7, col:25> col:25 pnt6 'struct Point':'Point' callinit
 | |   |   |     | `-CXXConstructExpr 0x5d6d88f78360 <col:25> 'struct Point':'Point' 'void () noexcept'
-| |   |   |     |-VarDecl 0x5d6d88f783a8 <col:7, col:30> col:30 pnt7 'struct Point':'Point' callinit
+| |   |   |     |-VFIRDecl 0x5d6d88f783a8 <col:7, col:30> col:30 pnt7 'struct Point':'Point' callinit
 | |   |   |     | `-CXXConstructExpr 0x5d6d88f78410 <col:30> 'struct Point':'Point' 'void () noexcept'
-| |   |   |     `-VarDecl 0x5d6d88f78460 <col:7, col:36> col:36 ptr_pnt8 'struct Point *'
+| |   |   |     `-VFIRDecl 0x5d6d88f78460 <col:7, col:36> col:36 ptr_pnt8 'struct Point *'
 | |   |   |-BinaryOperator 0x5d6d88f78590 <line:58:7, col:10> 'float' lvalue '='
 | |   |   | |-DeclRefExpr 0x5d6d88f78538 <col:7> 'float' lvalue VFIR 0x5d6d88f75dd8 'PI' 'float'
 | |   |   | `-ImplicitCastExpr 0x5d6d88f78578 <col:10> 'float' <FloatingCast>
@@ -251,15 +251,15 @@ TranslationUnitDecl 0x5d6d88f0b728 <<invalid sloc>> <invalid sloc>
 | |   |   | | `-IntegerLiteral 0x5d6d88f78638 <col:12> 'int' 5
 | |   |   | `-CompoundStmt 0x5d6d88f78a40 <col:14, line:64:7>
 | |   |   |   |-DeclStmt 0x5d6d88f78720 <line:61:9, col:15>
-| |   |   |   | `-VarDecl 0x5d6d88f786b8 <col:9, col:13> col:13 zB 'int'
+| |   |   |   | `-VFIRDecl 0x5d6d88f786b8 <col:9, col:13> col:13 zB 'int'
 | |   |   |   |-DeclStmt 0x5d6d88f78a20 <line:62:7, col:42>
-| |   |   |   | |-VarDecl 0x5d6d88f78758 <col:7, col:20> col:20 pnt9 'struct Point':'Point' callinit
+| |   |   |   | |-VFIRDecl 0x5d6d88f78758 <col:7, col:20> col:20 pnt9 'struct Point':'Point' callinit
 | |   |   |   | | `-CXXConstructExpr 0x5d6d88f787c0 <col:20> 'struct Point':'Point' 'void () noexcept'
-| |   |   |   | |-VarDecl 0x5d6d88f78808 <col:7, col:25> col:25 pnt10 'struct Point':'Point' callinit
+| |   |   |   | |-VFIRDecl 0x5d6d88f78808 <col:7, col:25> col:25 pnt10 'struct Point':'Point' callinit
 | |   |   |   | | `-CXXConstructExpr 0x5d6d88f78870 <col:25> 'struct Point':'Point' 'void () noexcept'
-| |   |   |   | |-VarDecl 0x5d6d88f788b8 <col:7, col:31> col:31 pnt11 'struct Point':'Point' callinit
+| |   |   |   | |-VFIRDecl 0x5d6d88f788b8 <col:7, col:31> col:31 pnt11 'struct Point':'Point' callinit
 | |   |   |   | | `-CXXConstructExpr 0x5d6d88f78920 <col:31> 'struct Point':'Point' 'void () noexcept'
-| |   |   |   | `-VarDecl 0x5d6d88f78968 <col:7, col:37> col:37 pnt12 'struct Point':'Point' callinit
+| |   |   |   | `-VFIRDecl 0x5d6d88f78968 <col:7, col:37> col:37 pnt12 'struct Point':'Point' callinit
 | |   |   |   |   `-CXXConstructExpr 0x5d6d88f789d0 <col:37> 'struct Point':'Point' 'void () noexcept'
 | |   |   |   `-BreakStmt 0x5d6d88f78a38 <line:63:9>
 | |   |   |-CaseStmt 0x5d6d88f78aa8 <line:66:7, line:69:7>
@@ -268,7 +268,7 @@ TranslationUnitDecl 0x5d6d88f0b728 <<invalid sloc>> <invalid sloc>
 | |   |   | | `-IntegerLiteral 0x5d6d88f78a68 <col:12> 'int' 6
 | |   |   | `-CompoundStmt 0x5d6d88f78b70 <col:14, line:69:7>
 | |   |   |   |-DeclStmt 0x5d6d88f78b50 <line:67:9, col:18>
-| |   |   |   | `-VarDecl 0x5d6d88f78ae8 <col:9, col:13> col:13 uuuuu 'int'
+| |   |   |   | `-VFIRDecl 0x5d6d88f78ae8 <col:9, col:13> col:13 uuuuu 'int'
 | |   |   |   `-BreakStmt 0x5d6d88f78b68 <line:68:9>
 | |   |   |-DefaultStmt 0x5d6d88f78ca0 <line:70:7, line:71:41>
 | |   |   | `-CompoundAssignOperator 0x5d6d88f78c70 <col:9, col:41> 'double' lvalue '+=' ComputeLHSTy='double' ComputeResultTy='double'
@@ -289,35 +289,35 @@ TranslationUnitDecl 0x5d6d88f0b728 <<invalid sloc>> <invalid sloc>
 | |-CXXConstructorDecl 0x5d6d88f7ae28 <line:11:7> col:7 implicit used constexpr MyClass 'void () noexcept' inline default trivial
 | | `-CompoundStmt 0x5d6d88f7b278 <col:7>
 | |-CXXConstructorDecl 0x5d6d88f7af28 <col:7> col:7 implicit constexpr MyClass 'void (const MyClass &)' inline default trivial noexcept-unevaluated 0x5d6d88f7af28
-| | `-ParmVarDecl 0x5d6d88f7b038 <col:7> col:7 'const MyClass &'
+| | `-ParmVFIRDecl 0x5d6d88f7b038 <col:7> col:7 'const MyClass &'
 | `-CXXConstructorDecl 0x5d6d88f7b0e8 <col:7> col:7 implicit constexpr MyClass 'void (MyClass &&)' inline default trivial noexcept-unevaluated 0x5d6d88f7b0e8
-|   `-ParmVarDecl 0x5d6d88f7b1f8 <col:7> col:7 'MyClass &&'
-|-VarDecl 0x5d6d88f7a9c8 parent 0x5d6d88f52460 prev 0x5d6d88f52648 <line:78:1, col:19> col:14 ZERO 'int' cinit
+|   `-ParmVFIRDecl 0x5d6d88f7b1f8 <col:7> col:7 'MyClass &&'
+|-VFIRDecl 0x5d6d88f7a9c8 parent 0x5d6d88f52460 prev 0x5d6d88f52648 <line:78:1, col:19> col:14 ZERO 'int' cinit
 | `-IntegerLiteral 0x5d6d88f7aa80 <col:19> 'int' 0
 `-FunctionDecl 0x5d6d88f7aca0 <line:80:1, line:91:1> line:80:5 main 'int (int, char **)'
-  |-ParmVarDecl 0x5d6d88f7ab10 <col:10, col:14> col:14 argc 'int'
-  |-ParmVarDecl 0x5d6d88f7abc0 <col:20, col:27> col:27 argv 'char **'
+  |-ParmVFIRDecl 0x5d6d88f7ab10 <col:10, col:14> col:14 argc 'int'
+  |-ParmVFIRDecl 0x5d6d88f7abc0 <col:20, col:27> col:27 argv 'char **'
   `-CompoundStmt 0x5d6d88f71000 <col:32, line:91:1>
     |-DeclStmt 0x5d6d88f7b370 <line:81:5, col:23>
-    | `-VarDecl 0x5d6d88f7ada8 <col:5, col:13> col:13 varMyClass 'MyClass' callinit
+    | `-VFIRDecl 0x5d6d88f7ada8 <col:5, col:13> col:13 varMyClass 'MyClass' callinit
     |   `-CXXConstructExpr 0x5d6d88f7b348 <col:13> 'MyClass' 'void () noexcept'
     |-DeclStmt 0x5d6d88f7b480 <line:82:5, col:22>
-    | `-VarDecl 0x5d6d88f7b398 <col:5, col:18> col:18 used pnt1 'Point' static callinit
+    | `-VFIRDecl 0x5d6d88f7b398 <col:5, col:18> col:18 used pnt1 'Point' static callinit
     |   `-CXXConstructExpr 0x5d6d88f7b400 <col:18> 'Point' 'void () noexcept'
     |-DeclStmt 0x5d6d88f7b548 <line:83:5, col:22>
-    | `-VarDecl 0x5d6d88f7b4b8 <col:5, col:18> col:18 used pnt2 'struct Point':'Point' callinit
+    | `-VFIRDecl 0x5d6d88f7b4b8 <col:5, col:18> col:18 used pnt2 'struct Point':'Point' callinit
     |   `-CXXConstructExpr 0x5d6d88f7b520 <col:18> 'struct Point':'Point' 'void () noexcept'
     |-CompoundStmt 0x5d6d88f70fa8 <line:84:5, line:88:5>
     | |-DeclStmt 0x5d6d88f7b658 <line:85:9, col:34>
-    | | `-VarDecl 0x5d6d88f7b588 <col:9, col:30> col:24 ptr1 'struct Point *' cinit
+    | | `-VFIRDecl 0x5d6d88f7b588 <col:9, col:30> col:24 ptr1 'struct Point *' cinit
     | |   `-UnaryOperator 0x5d6d88f7b610 <col:29, col:30> 'Point *' prefix '&' cannot overflow
     | |     `-DeclRefExpr 0x5d6d88f7b5f0 <col:30> 'Point' lvalue VFIR 0x5d6d88f7b398 'pnt1' 'Point'
     | |-DeclStmt 0x5d6d88f70ec8 <line:86:9, col:34>
-    | | `-VarDecl 0x5d6d88f70e00 <col:9, col:30> col:24 ptr2 'struct Point *' cinit
+    | | `-VFIRDecl 0x5d6d88f70e00 <col:9, col:30> col:24 ptr2 'struct Point *' cinit
     | |   `-UnaryOperator 0x5d6d88f70e88 <col:29, col:30> 'struct Point *' prefix '&' cannot overflow
     | |     `-DeclRefExpr 0x5d6d88f70e68 <col:30> 'struct Point':'Point' lvalue VFIR 0x5d6d88f7b4b8 'pnt2' 'struct Point':'Point'
     | `-DeclStmt 0x5d6d88f70f90 <line:87:9, col:26>
-    |   `-VarDecl 0x5d6d88f70f00 <col:9, col:22> col:22 pnt3 'struct Point':'Point' callinit
+    |   `-VFIRDecl 0x5d6d88f70f00 <col:9, col:22> col:22 pnt3 'struct Point':'Point' callinit
     |     `-CXXConstructExpr 0x5d6d88f70f68 <col:22> 'struct Point':'Point' 'void () noexcept'
     `-ReturnStmt 0x5d6d88f70ff0 <line:90:3, col:10>
       `-IntegerLiteral 0x5d6d88f70fd0 <col:10> 'int' 0

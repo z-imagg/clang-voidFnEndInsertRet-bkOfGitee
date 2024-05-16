@@ -35,7 +35,7 @@ public:
     //  1. 直接写在'case'内，其父亲是case语句的
     //  1. 直接写在'case'内, 但是其父亲是switch块的
     //注意: 直接写的'case {'内的 、 直接写在'case'内  不是一回事，而是差别很大。
-    int VarDeclDirectlyInCaseKCnt;
+    int VFIRDeclDirectlyInCaseKCnt;
 
     explicit RangeHasMacroAstVst(CompilerInstance &_CI , SourceRange _sourceRange )
             :
@@ -43,7 +43,7 @@ public:
             caseKSrcRange(_sourceRange),
             hasMacro(false),
             caseKSubStmtCnt(0),
-            VarDeclDirectlyInCaseKCnt(0)
+            VFIRDeclDirectlyInCaseKCnt(0)
     {
 
     }

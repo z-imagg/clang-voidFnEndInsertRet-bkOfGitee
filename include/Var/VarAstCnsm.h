@@ -17,7 +17,7 @@
 
 #include "VFIR/FnVst.h"
 #include "base/Util.h"
-#include "VarDeclVst.h"
+#include "VFIRDeclVst.h"
 
 using namespace llvm;
 using namespace clang;
@@ -68,7 +68,7 @@ public:
     FnVst fnVst;
     //endregion
 
-    VarDeclVst varDeclVst;
+    VFIRDeclVst varDeclVst;
 };
 
 
