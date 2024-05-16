@@ -35,7 +35,7 @@ bool FnVst::TraverseCompoundStmt(CompoundStmt *compoundStmt  ){
     DynTypedNode parent;
     ASTNodeKind parentNK;
     bool only1P = Util::only1ParentNodeKind(CI, CtxRef, compoundStmt, parent, parentNK);
-    //参考 例子语法树 http://giteaz:3000/cl_plg/clang-var/src/branch/release/test_in/test_main.cpp.syntax_tree.txt
+    //参考 例子语法树 http://giteaz:3000/cl_plg/clang-voidFnEndInsertRet/src/branch/release/test_in/test_main.cpp.syntax_tree.txt
     bool parentNKIsFunctionDecl = ASTNodeKind::getFromNodeKind<FunctionDecl>().isSame(parentNK);
 
     bool care=(only1P && parentNKIsFunctionDecl);

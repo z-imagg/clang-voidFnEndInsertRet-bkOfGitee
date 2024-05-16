@@ -13,7 +13,7 @@ TranslationUnitDecl 0x5d6d88f0b728 <<invalid sloc>> <invalid sloc>
 | `-ConstantArrayType 0x5d6d88f51d30 '__va_list_tag[1]' 1 
 |   `-RecordType 0x5d6d88f0c500 '__va_list_tag'
 |     `-CXXRecord 0x5d6d88f0c468 '__va_list_tag'
-|-TypedefDecl 0x5d6d88f51df8 </fridaAnlzAp/clang-var/test_in/test_main.cpp:3:1, col:16> col:16 referenced DOUBLE_typedef 'double'
+|-TypedefDecl 0x5d6d88f51df8 </fridaAnlzAp/clang-voidFnEndInsertRet/test_in/test_main.cpp:3:1, col:16> col:16 referenced DOUBLE_typedef 'double'
 | `-BuiltinType 0x5d6d88f0b950 'double'
 |-CXXRecordDecl 0x5d6d88f51e50 <line:5:1, line:8:1> line:5:8 referenced struct Point definition
 | |-DefinitionData pass_in_registers aggregate standard_layout trivially_copyable pod trivial literal

@@ -3,7 +3,7 @@
 "configurations": [
 
 { "name": "VFIRAlone", "type": "cppdbg", "request": "launch", "program": "${workspaceRoot}/build/bin/VFIRAlone",   "cwd": ".",
-"args": ["/fridaAnlzAp/clang-var/test_in/test_main.cpp"] }
+"args": ["/fridaAnlzAp/clang-voidFnEndInsertRet/test_in/test_main.cpp"] }
 
 ]
 

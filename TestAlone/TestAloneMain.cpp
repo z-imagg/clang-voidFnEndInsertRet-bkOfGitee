@@ -132,7 +132,7 @@ int main() {
 //  PP.EnterSourceFile()
 
   //region 添加输入源码文件
-  FrontendInputFile srcFile = clang::FrontendInputFile("/pubx/clang-var/test_in/test_main.cpp", clang::InputKind(clang::Language::CXX));
+  FrontendInputFile srcFile = clang::FrontendInputFile("/pubx/clang-voidFnEndInsertRet/test_in/test_main.cpp", clang::InputKind(clang::Language::CXX));
   CI.getFrontendOpts().Inputs.push_back(srcFile);
   //endregion
 
