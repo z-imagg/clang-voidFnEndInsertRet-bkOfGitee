@@ -16,6 +16,7 @@
 using namespace llvm;
 using namespace clang;
 
+//【术语】 cmpnd == compound, Brc == Brace == 花括号, LBrc == Left Brace == 左花括号, RBrc == Right Brace == 右花括号
 
 
 bool FnVst::TraverseCompoundStmt(CompoundStmt *compoundStmt  ){
