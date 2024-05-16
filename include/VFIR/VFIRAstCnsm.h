@@ -17,7 +17,6 @@
 
 #include "VFIR/FnVst.h"
 #include "base/Util.h"
-#include "VFIRDeclVst.h"
 
 using namespace llvm;
 using namespace clang;
@@ -38,8 +37,7 @@ public:
             Ctx(*_astContext),
             SM(_SM),
             varOk(false),
-            fnVst(_CI, _rewriter_ptr, _astContext, _SM, _langOptions),
-            varDeclVst(_CI,_rewriter_ptr,_astContext,_SM,_langOptions)
+            fnVst(_CI, _rewriter_ptr, _astContext, _SM, _langOptions)
             {
       //构造函数
 //      _rewriter_ptr->overwriteChangedFiles();//C'正常.
@@ -68,7 +66,6 @@ public:
     FnVst fnVst;
     //endregion
 
-    VFIRDeclVst varDeclVst;
 };
 
 
