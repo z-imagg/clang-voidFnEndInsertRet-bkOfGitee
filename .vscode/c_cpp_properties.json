@@ -3,8 +3,8 @@
         {
             "name": "Linux",
             "includePath": [
-                "/fridaAnlzAp/clang-var/include/",
-                "/fridaAnlzAp/clang-var/base_home/include",
+                "/fridaAnlzAp/clang-voidFnEndInsertRet/include/",
+                "/fridaAnlzAp/clang-voidFnEndInsertRet/base_home/include",
                 "/app/fmtlib-fmt/include/",
                 "/app/llvm_release_home/clang+llvm-15.0.0-x86_64-linux-gnu-rhel-8.4/include"
             ],

@@ -1,14 +1,14 @@
-#include "Var/VarAstCnsm.h"
-#include "Var/CollectIncMacro_PPCb.h"
-#include "Var/Constant.h"
+#include "VFIR/VFIRAstCnsm.h"
+#include "VFIR/CollectIncMacro_PPCb.h"
+#include "VFIR/Constant.h"
 
 #include "base/MyAssert.h"
 
 
-bool VarAstCnsm::mainFileProcessed=false;
+bool VFIRAstCnsm::mainFileProcessed=false;
 
 
- void VarAstCnsm::HandleTranslationUnit(ASTContext &Ctx) {
+ void VFIRAstCnsm::HandleTranslationUnit(ASTContext &Ctx) {
      ///region 在此编译进程内, 跳过已处理的mainFile, 避免重复处理
      //被上层多次调用 本方法HandleTranslationUnit，后续的调用不再进入实际处理
      if(mainFileProcessed){
@@ -108,7 +108,7 @@ reinterpret_cast<uintptr_t> ( (fnVst.mRewriter_ptr.get()) ) ) << std::endl;
 
    ///region 4. 应用修改到源文件
    //如果 花括号遍历器 确实有进行过至少一次插入花括号 , 才应用修改到源文件
-   if( !(varDeclVst.VarDeclLocIdSet.empty()) ){
+   if( !(varDeclVst.VFIRDeclLocIdSet.empty()) ){
    varDeclVst.mRewriter_ptr->overwriteChangedFiles();
    }
    if( !(fnVst.funcEnterLocIdSet.empty()) ){

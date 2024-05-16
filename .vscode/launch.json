@@ -2,8 +2,8 @@
 "version": "0.2.0",
 "configurations": [
 
-{ "name": "VarAlone", "type": "cppdbg", "request": "launch", "program": "${workspaceRoot}/build/bin/VarAlone",   "cwd": ".",
-"args": ["/fridaAnlzAp/clang-var/test_in/test_main.cpp"] }
+{ "name": "VFIRAlone", "type": "cppdbg", "request": "launch", "program": "${workspaceRoot}/build/bin/VFIRAlone",   "cwd": ".",
+"args": ["/fridaAnlzAp/clang-voidFnEndInsertRet/test_in/test_main.cpp"] }
 
 ]
 

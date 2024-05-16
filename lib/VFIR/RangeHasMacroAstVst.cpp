@@ -1,4 +1,4 @@
-#include "Var/RangeHasMacroAstVst.h"
+#include "VFIR/RangeHasMacroAstVst.h"
 
 
 
@@ -54,8 +54,8 @@ bool RangeHasMacroAstVst::VisitStmt(clang::Stmt *stmt) {
           normalDirectlyInCase
 //注意: 直接写的'case {'内的 、 直接写在'case'内  不是一回事，而是差别很大。
       ){
-        VarDeclDirectlyInCaseKCnt++;
-  Util::printStmt(CI.getASTContext(),CI,"直接写在'case'内","VarDeclDirectlyInCaseKCnt",stmt,true);
+        VFIRDeclDirectlyInCaseKCnt++;
+  Util::printStmt(CI.getASTContext(),CI,"直接写在'case'内","VFIRDeclDirectlyInCaseKCnt",stmt,true);
       }
 
 

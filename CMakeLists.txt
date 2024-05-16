@@ -1,4 +1,4 @@
-#参考: http://giteaz:3000/anzc/clang-varBE/src/commit/cd31e1039a63444e42d78f2bf9b59eee3be45a95/CMakeLists.txt
+#参考: http://giteaz:3000/anzc/clang-voidFnEndInsertRetBE/src/commit/cd31e1039a63444e42d78f2bf9b59eee3be45a95/CMakeLists.txt
 
 cmake_minimum_required(VERSION 3.13.4)
 
@@ -58,8 +58,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/bin")
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}/lib")
 
 # 添加子模块
-add_subdirectory(VarPlugin)
-add_subdirectory(VarAlone)
+add_subdirectory(VFIRPlugin)
+add_subdirectory(VFIRAlone)
 add_subdirectory(TestAlone)
 add_subdirectory(test_in)
-add_subdirectory(runtime_cpp__vars_fn)

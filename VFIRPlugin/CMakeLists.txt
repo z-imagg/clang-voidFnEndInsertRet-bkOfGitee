@@ -2,32 +2,32 @@
 # ======================================================
 
 
-set(Var_SOURCES
-"${CMAKE_CURRENT_SOURCE_DIR}/../lib/Var/VarAstAct.cpp"
+set(VFIR_SOURCES
+"${CMAKE_CURRENT_SOURCE_DIR}/../lib/VFIR/VFIRAstAct.cpp"
 
 "${CMAKE_CURRENT_SOURCE_DIR}/../base_home/impl/base/Util.cpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/../base_home/impl/base/LocId.cpp"
-"${CMAKE_CURRENT_SOURCE_DIR}/../lib/Var/FnVst.cpp"
-"${CMAKE_CURRENT_SOURCE_DIR}/../lib/Var/VarDeclVst.cpp"
-"${CMAKE_CURRENT_SOURCE_DIR}/../lib/Var/RangeHasMacroAstVst.cpp"
-"${CMAKE_CURRENT_SOURCE_DIR}/../lib/Var/CollectIncMacro_PPCb.cpp"
-"${CMAKE_CURRENT_SOURCE_DIR}/../lib/Var/VarAstCnsm.cpp"
+"${CMAKE_CURRENT_SOURCE_DIR}/../lib/VFIR/FnVst.cpp"
+"${CMAKE_CURRENT_SOURCE_DIR}/../lib/VFIR/VFIRDeclVst.cpp"
+"${CMAKE_CURRENT_SOURCE_DIR}/../lib/VFIR/RangeHasMacroAstVst.cpp"
+"${CMAKE_CURRENT_SOURCE_DIR}/../lib/VFIR/CollectIncMacro_PPCb.cpp"
+"${CMAKE_CURRENT_SOURCE_DIR}/../lib/VFIR/VFIRAstCnsm.cpp"
 )
 
 
     # Create a library corresponding to 'plugin'
     add_library(
-            VarPlugin
+            VFIRPlugin
       SHARED
-      ${Var_SOURCES}
+      ${VFIR_SOURCES}
       )
 
-target_link_libraries(VarPlugin
+target_link_libraries(VFIRPlugin
         "${LIBFMT_STATIC}"   #/pubx/fmt/build/libfmt.a
         )
 
     # Configure include directories for 'plugin'
-    target_include_directories(VarPlugin
+    target_include_directories(VFIRPlugin
       PRIVATE
     "${CMAKE_CURRENT_SOURCE_DIR}/../include"
     "${CMAKE_CURRENT_SOURCE_DIR}/../base_home/include"

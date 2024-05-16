@@ -1,15 +1,15 @@
-#include "Var/VarAstCnsm.h"
+#include "VFIR/VFIRAstCnsm.h"
 
 #include "clang/AST/AST.h"
 #include "clang/Frontend/CompilerInstance.h"
 #include "clang/Frontend/FrontendPluginRegistry.h"
 #include "clang/Rewrite/Core/Rewriter.h"
-#include "Var/CollectIncMacro_PPCb.h"
+#include "VFIR/CollectIncMacro_PPCb.h"
 
 using namespace llvm;
 using namespace clang;
 
-class VarAstAct : public PluginASTAction {
+class VFIRAstAct : public PluginASTAction {
 public:
     std::unique_ptr<ASTConsumer>
     CreateASTConsumer(CompilerInstance &CI,
@@ -24,7 +24,7 @@ public:
       // Act中 添加 收集#include、#define的 预处理回调
       PP.addPPCallbacks(std::make_unique<CollectIncMacro_PPCb>(CI));
 
-      return std::make_unique<VarAstCnsm>(CI,mRewriter_ptr, &astContext, SM, langOptions);
+      return std::make_unique<VFIRAstCnsm>(CI,mRewriter_ptr, &astContext, SM, langOptions);
     }
 
     bool ParseArgs(const CompilerInstance &CI,
@@ -44,4 +44,4 @@ private:
     const std::shared_ptr<Rewriter> mRewriter_ptr=std::make_shared<Rewriter>();//这里是插件Act中的Rewriter，是源头，理应构造Rewriter.
 };
 
-static FrontendPluginRegistry::Add<VarAstAct>   actRegistry(/*Name=*/"VarPlugin",  /*Description=*/"加花括号插件");
+static FrontendPluginRegistry::Add<VFIRAstAct>   actRegistry(/*Name=*/"VFIRPlugin",  /*Description=*/"加花括号插件");

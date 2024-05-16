@@ -1,15 +1,15 @@
 
 
 MESSAGE("CMAKE_SOURCE_DIR: ${CMAKE_SOURCE_DIR}")
-#CMAKE_SOURCE_DIR: /pubx/clang-var/
+#CMAKE_SOURCE_DIR: /pubx/clang-voidFnEndInsertRet/
 
 MESSAGE("CMAKE_CURRENT_SOURCE_DIR: ${CMAKE_CURRENT_SOURCE_DIR}")
-#CMAKE_CURRENT_SOURCE_DIR: /pubx/clang-var/tools
+#CMAKE_CURRENT_SOURCE_DIR: /pubx/clang-voidFnEndInsertRet/tools
 
 set(TestAlone_SOURCES
 "${CMAKE_CURRENT_SOURCE_DIR}/../TestAlone/TestAloneMain.cpp"
-"${CMAKE_CURRENT_SOURCE_DIR}/../lib/Var/RangeHasMacroAstVst.cpp"
-"${CMAKE_CURRENT_SOURCE_DIR}/../lib/Var/CollectIncMacro_PPCb.cpp"
+"${CMAKE_CURRENT_SOURCE_DIR}/../lib/VFIR/RangeHasMacroAstVst.cpp"
+"${CMAKE_CURRENT_SOURCE_DIR}/../lib/VFIR/CollectIncMacro_PPCb.cpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/../base_home/impl/base/Util.cpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/../base_home/impl/base/LocId.cpp"
 
@@ -26,7 +26,7 @@ set(TestAlone_SOURCES
     TestAlone
       PRIVATE
     "${LIBFMT_INCLUDE}"
-    "${CMAKE_CURRENT_SOURCE_DIR}/../include"  # == /fridaAnlzAp/clang-var/include
+    "${CMAKE_CURRENT_SOURCE_DIR}/../include"  # == /fridaAnlzAp/clang-voidFnEndInsertRet/include
     "${CMAKE_CURRENT_SOURCE_DIR}/../base_home/include/"
     )
 

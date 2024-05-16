@@ -1,5 +1,5 @@
-#ifndef VarDeclVst_H
-#define VarDeclVst_H
+#ifndef FnVst_H
+#define FnVst_H
 
 
 #include <clang/Rewrite/Core/Rewriter.h>
@@ -19,26 +19,23 @@ using namespace clang;
 /**
  * 插入花括号Visitor
  */
-class VarDeclVst
-        : public RecursiveASTVisitor<VarDeclVst> {
+class FnVst
+        : public RecursiveASTVisitor<FnVst> {
 public:
 public:
     //Rewriter:4:  Consumer将Rewriter传递给Visitor
-    explicit VarDeclVst(CompilerInstance &CI, const std::shared_ptr<Rewriter> rewriter_ptr, ASTContext *Ctx, SourceManager& SM, LangOptions &_langOptions)
+    explicit FnVst(CompilerInstance &CI, const std::shared_ptr<Rewriter> rewriter_ptr, ASTContext *Ctx, SourceManager& SM, LangOptions &_langOptions)
     //Rewriter:5:  Consumer将Rewriter传递给Visitor, 并由Visitor.mRewriter接收
     : mRewriter_ptr(rewriter_ptr),
-    Ctx(Ctx),
+    Ctx(Ctx),CtxRef(*Ctx),
     CI(CI),
     SM(SM)
     {
 
     }
 
-
-//    virtual bool VisitDeclStmt(DeclStmt* decl_k);
-    virtual bool TraverseDeclStmt(DeclStmt* decl_k);
-    bool process_singleDecl(const Decl *singleDecl, bool& isStructType, std::string &typeName, QualType &qualType);
-    bool insertAfter_VarDecl(const std::string typeName,int varCnt,LocId varDeclLocId, SourceLocation varDeclEndLoc );
+    bool insertBefore_Return(LocId cmpndStmRBrcLocId, SourceLocation cmpndStmRBrcLoc  );
+    bool TraverseCompoundStmt(CompoundStmt *compoundStmt  );
 
 
 
@@ -48,11 +45,13 @@ public:
 
 public:
     ASTContext *Ctx;
+    ASTContext& CtxRef;
     CompilerInstance& CI;
     SourceManager& SM;
 
-    //一个位置若是插入了花括号，则表明此位置不需要再次插入花括号了。
-    std::unordered_set<LocId,LocId> VarDeclLocIdSet;
+
+    std::unordered_set<LocId,LocId> funcReturnLocIdSet;
+    std::unordered_set<LocId,LocId> funcEnterLocIdSet;
 };
 
 
