@@ -3,7 +3,7 @@
 
 
 set(VFIR_SOURCES
-"${CMAKE_CURRENT_SOURCE_DIR}/../lib/VFIR/VarAstAct.cpp"
+"${CMAKE_CURRENT_SOURCE_DIR}/../lib/VFIR/VFIRAstAct.cpp"
 
 "${CMAKE_CURRENT_SOURCE_DIR}/../base_home/impl/base/Util.cpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/../base_home/impl/base/LocId.cpp"
@@ -11,7 +11,7 @@ set(VFIR_SOURCES
 "${CMAKE_CURRENT_SOURCE_DIR}/../lib/VFIR/VarDeclVst.cpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/../lib/VFIR/RangeHasMacroAstVst.cpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/../lib/VFIR/CollectIncMacro_PPCb.cpp"
-"${CMAKE_CURRENT_SOURCE_DIR}/../lib/VFIR/VarAstCnsm.cpp"
+"${CMAKE_CURRENT_SOURCE_DIR}/../lib/VFIR/VFIRAstCnsm.cpp"
 )
 
 

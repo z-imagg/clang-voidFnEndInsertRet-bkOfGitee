@@ -16,7 +16,7 @@ set(VFIRAlone_SOURCES
 "${CMAKE_CURRENT_SOURCE_DIR}/../lib/VFIR/VarDeclVst.cpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/../lib/VFIR/RangeHasMacroAstVst.cpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/../lib/VFIR/CollectIncMacro_PPCb.cpp"
-"${CMAKE_CURRENT_SOURCE_DIR}/../lib/VFIR/VarAstCnsm.cpp"
+"${CMAKE_CURRENT_SOURCE_DIR}/../lib/VFIR/VFIRAstCnsm.cpp"
 )
 
     # Create a library corresponding to 'plugin'
