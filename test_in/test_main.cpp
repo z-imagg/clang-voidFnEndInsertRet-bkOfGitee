@@ -1,4 +1,3 @@
-#pragma message("VarBE_inserted")
 #define CASE_SAME(x) case x:
 #define INT_T int
 typedef double DOUBLE_typedef;
@@ -14,12 +13,12 @@ public:
     static int ZERO;
 public:
 
-  char* switchDemo(int cnt, short chr){_VarDeclLs * _vdLs=_init_varLs_inFn("/fridaAnlzAp/clang-var//test_in/test_main.cpp", "MyClass::switchDemo", 16, 39); /* 初始化函数变量列表, /fridaAnlzAp/clang-var//test_in/test_main.cpp:16,39*/
+  char* switchDemo(int cnt, short chr){
   int* myIntPtr;//单变量声明
   char x,y,z;//多变量声明
   int i1,i2,*p_i3;//多变量声明
-  UserEntity admin;createVar(_vdLs, "class UserEntity", 1)  /* 创建变量通知,  /fridaAnlzAp/clang-var//test_in/test_main.cpp:20,19 */ ;
-  ScoreRelation scoreRlatn;createVar(_vdLs, "class ScoreRelation", 1)  /* 创建变量通知,  /fridaAnlzAp/clang-var//test_in/test_main.cpp:21,27 */ ;
+  UserEntity admin;
+  ScoreRelation scoreRlatn;
   INT_T num_int;
   DOUBLE_typedef num_double;
   double sum=1.*cnt*chr;
@@ -32,7 +31,7 @@ public:
       break;
       case 0:
       {
-      struct Point pnt4;createVar(_vdLs, "struct Point", 1)  /* 创建变量通知,  /fridaAnlzAp/clang-var//test_in/test_main.cpp:34,24 */ ;
+      struct Point pnt4;
         L=(cnt+chr)%50;
         return &L+1;//case0 结束位置左移1
       }
@@ -54,13 +53,13 @@ public:
         L++;
         sum=L+sum;
         if (L)  goto start;//这里并不是case4结束, 这里是case4的块1结束, case4 : 块1+散语句，
-      struct Point pnt5,pnt6,pnt7,*ptr_pnt8;createVar(_vdLs, "struct Point", 3)  /* 创建变量通知,  /fridaAnlzAp/clang-var//test_in/test_main.cpp:56,44 */ ;
+      struct Point pnt5,pnt6,pnt7,*ptr_pnt8;
       }
       PI=3.14;
       return (char*)0;
       case 5:{
         int zB;
-      struct Point pnt9,pnt10,pnt11,pnt12;createVar(_vdLs, "struct Point", 4)  /* 创建变量通知,  /fridaAnlzAp/clang-var//test_in/test_main.cpp:62,42 */ ;
+      struct Point pnt9,pnt10,pnt11,pnt12;
         break;//case5 结束位置左移1
       }//case5语句结束, 但后面还有一行注释
       ////////
@@ -73,20 +72,20 @@ public:
         return &L;//default结束
     }
     return 0;
-  destroyVarLs_inFn(_vdLs); /* 销毁函数变量列表, /fridaAnlzAp/clang-var//test_in/test_main.cpp*/}
+  }
 };
 
 int MyClass::ZERO=0;
 
-int main(int argc, char** argv){_VarDeclLs * _vdLs=_init_varLs_inFn("/fridaAnlzAp/clang-var//test_in/test_main.cpp", "main", 80, 32); /* 初始化函数变量列表, /fridaAnlzAp/clang-var//test_in/test_main.cpp:80,32*/
-    MyClass varMyClass;createVar(_vdLs, "class MyClass", 1)  /* 创建变量通知,  /fridaAnlzAp/clang-var//test_in/test_main.cpp:81,23 */ ;
-    static Point pnt1;createVar(_vdLs, "struct Point", 1)  /* 创建变量通知,  /fridaAnlzAp/clang-var//test_in/test_main.cpp:82,22 */ ;
-    struct Point pnt2;createVar(_vdLs, "struct Point", 1)  /* 创建变量通知,  /fridaAnlzAp/clang-var//test_in/test_main.cpp:83,22 */ ;
+int main(int argc, char** argv){
+    MyClass varMyClass;
+    static Point pnt1;
+    struct Point pnt2;
     {
         struct Point * ptr1=&pnt1;
         struct Point * ptr2=&pnt2;
-        struct Point pnt3;createVar(_vdLs, "struct Point", 1)  /* 创建变量通知,  /fridaAnlzAp/clang-var//test_in/test_main.cpp:87,26 */ ;
+        struct Point pnt3;
     }
 
   return 0;
-destroyVarLs_inFn(_vdLs); /* 销毁函数变量列表, /fridaAnlzAp/clang-var//test_in/test_main.cpp*/}
+}
