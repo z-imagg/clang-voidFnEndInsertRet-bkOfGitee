@@ -75,11 +75,16 @@ bool FnVst::TraverseCompoundStmt(CompoundStmt *compoundStmt  ){
 }
 
 bool FnVst::insertBefore_Return(LocId cmpndStmRBrcLocId, SourceLocation cmpndStmRBrcLoc  ){
+    std::string verbose="";
+    //环境变量 clangPlgVerbose_voidFnEndInsertRet 控制 是否在注释中输出完整路径_行号_列号
+    if(Util::envVarEq("clangPlgVerbose_voidFnEndInsertRet","true")){
+        verbose=cmpndStmRBrcLocId.to_string();
+    }
+
     //region 构造插入语句
     std::string cStr_destroy=fmt::format(
             "return; /* voidFnEndInsertRet: {}*/",
-            cmpndStmRBrcLocId.filePath,
-            cmpndStmRBrcLocId.to_string()
+            verbose
     );
     llvm::StringRef strRef_destroy(cStr_destroy);
     bool insertResult_destroy=mRewriter_ptr->InsertTextBefore(cmpndStmRBrcLoc , strRef_destroy);
