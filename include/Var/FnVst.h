@@ -34,31 +34,8 @@ public:
 
     }
 
-    bool insertBefore_X__funcReturn(LocId cmpndStmRBrcLocId, SourceLocation cmpndStmRBrcLoc  );
-    bool insertAfterFnLeftBrace__insertBeforeFnRightBrace(LocId fnBdLBrcLocId, SourceLocation funcBodyLBraceLoc , SourceLocation funcBodyRBraceLoc );
+    bool insertBefore_Return(LocId cmpndStmRBrcLocId, SourceLocation cmpndStmRBrcLoc  );
     bool TraverseCompoundStmt(CompoundStmt *compoundStmt  );
-    virtual bool TraverseFunctionDecl(FunctionDecl* funcDecl);
-    bool TraverseCXXConstructorDecl(CXXConstructorDecl* cxxCnstrDecl);
-    bool TraverseCXXMethodDecl(CXXMethodDecl* cxxMethDecl);
-    bool TraverseCXXConversionDecl(CXXConversionDecl * cxxCnvDecl);
-    bool TraverseCXXDestructorDecl(CXXDestructorDecl * cxxDestructorDecl);
-    bool I__TraverseCXXMethodDecl(CXXMethodDecl* cxxMethDecl,const char* who);
-    bool TraverseLambdaExpr(LambdaExpr *lambdaExpr);
-    bool _Traverse_Func(
-//            bool funcIsStatic,
-//            bool funcIsInline,
-            QualType funcReturnType,
-            bool isaCXXConstructorDecl,
-            Stmt *endStmtOfFuncBody,
-            SourceLocation funcBodyLBraceLoc,
-            SourceLocation funcBodyRBraceLoc,
-            LocId funcBodyLBraceLocId,
-            LocId funcBodyRBraceLocId,
-            CompoundStmt* compoundStmt,
-            std::string funcName
-    );
-
-    bool TraverseReturnStmt(ReturnStmt *returnStmt);
 
 
 

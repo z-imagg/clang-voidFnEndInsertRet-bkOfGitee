@@ -69,17 +69,11 @@ bool FnVst::TraverseCompoundStmt(CompoundStmt *compoundStmt  ){
 
       LocId compoundStmtRBracLocId=LocId::buildFor(filePath, "", compoundStmtRBracLoc, SM);
   ///1.7  在上面算出的位置处, 插入释放语句
-    bool insertResult=insertBefore_X__tick(
-            LifeStep::Free,
-            compoundStmtID,
-            insertLoc,
-            stackVarAllocCnt,
-            stackVarFreeCnt,
-            heapObjAllocCnt,
-            heapObjcFreeCnt,
-            "TraverseCompoundStmt:块释放");
-    std::string title=fmt::format("插入结果:{},RwtPtr:{:x}",    insertResult,reinterpret_cast<uintptr_t> (mRewriter_ptr.get() ) );
-    Util::printStmt(*Ctx, CI, "TraverseCompoundStmt插入块释放", title, compoundStmt, false);  //开发用打印
+    bool insertResult=insertBefore_Return(
+            compoundStmtRBracLocId,
+            compoundStmtRBracLoc);
+//    std::string title=fmt::format("插入结果:{},RwtPtr:{:x}",    insertResult,reinterpret_cast<uintptr_t> (mRewriter_ptr.get() ) );
+//    Util::printStmt(*Ctx, CI, "TraverseCompoundStmt插入块释放", title, compoundStmt, false);  //开发用打印
 
   }
   //endregion
@@ -88,19 +82,19 @@ bool FnVst::TraverseCompoundStmt(CompoundStmt *compoundStmt  ){
   return true;
 }
 
-bool FnVst::insertBefore_X__funcReturn(LocId cmpndStmRBrcLocId, SourceLocation cmpndStmRBrcLoc  ){
+bool FnVst::insertBefore_Return(LocId cmpndStmRBrcLocId, SourceLocation cmpndStmRBrcLoc  ){
     //region 构造插入语句
     std::string cStr_destroy=fmt::format(
-            "destroyVarLs_inFn(_vdLs); /* 销毁函数变量列表, {}*/",
-            retBgnLocId.filePath,
-            retBgnLocId.funcName,
-            retBgnLocId.to_string()
+            "return; /* 销毁函数变量列表, {}*/",
+            cmpndStmRBrcLocId.filePath,
+            cmpndStmRBrcLocId.funcName,
+            cmpndStmRBrcLocId.to_string()
     );
     llvm::StringRef strRef_destroy(cStr_destroy);
-    bool insertResult_destroy=mRewriter_ptr->InsertTextBefore(retBgnLoc , strRef_destroy);
+    bool insertResult_destroy=mRewriter_ptr->InsertTextBefore(cmpndStmRBrcLoc , strRef_destroy);
     //endregion
 
     //记录已插入语句的节点ID们以防重： 即使重复遍历了 但不会重复插入
-    funcReturnLocIdSet.insert(retBgnLocId);
+    funcReturnLocIdSet.insert(cmpndStmRBrcLocId);
     return insertResult_destroy;
 }
