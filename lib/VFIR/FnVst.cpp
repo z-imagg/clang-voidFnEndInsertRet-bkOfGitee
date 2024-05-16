@@ -6,7 +6,6 @@
 #include "clang/Frontend/FrontendPluginRegistry.h"
 #include "base/Util.h"
 #include "VFIR/RangeHasMacroAstVst.h"
-#include "VFIR/CollectIncMacro_PPCb.h"
 #include <vector>
 
 #include <fmt/core.h>
