@@ -15,6 +15,8 @@ public:
     double m_d1;
     int m_n2;
 
+    MyClass( ){}
+
     MyClass(float f1, int n1)
     :m_d1(f1),m_n2(n1)
     {
@@ -67,4 +69,4 @@ int main(int argc, char** argv){
     }
 
   return 0;
-}
+ }
