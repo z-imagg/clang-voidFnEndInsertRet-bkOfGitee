@@ -1,10 +1,10 @@
-#include "Var/VarAstCnsm.h"
+#include "VFIR/VarAstCnsm.h"
 
 #include "clang/AST/AST.h"
 #include "clang/Frontend/CompilerInstance.h"
 #include "clang/Frontend/FrontendPluginRegistry.h"
 #include "clang/Rewrite/Core/Rewriter.h"
-#include "Var/CollectIncMacro_PPCb.h"
+#include "VFIR/CollectIncMacro_PPCb.h"
 
 using namespace llvm;
 using namespace clang;

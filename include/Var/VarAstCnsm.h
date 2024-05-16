@@ -15,7 +15,7 @@
 
 #include <fmt/core.h>
 
-#include "Var/FnVst.h"
+#include "VFIR/FnVst.h"
 #include "base/Util.h"
 #include "VarDeclVst.h"
 

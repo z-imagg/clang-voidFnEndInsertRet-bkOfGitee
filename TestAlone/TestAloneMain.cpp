@@ -13,8 +13,8 @@
 #include <iostream>
 
 #include "base/Util.h"
-#include "Var/RangeHasMacroAstVst.h"
-#include "Var/CollectIncMacro_PPCb.h"
+#include "VFIR/RangeHasMacroAstVst.h"
+#include "VFIR/CollectIncMacro_PPCb.h"
 
 
 using namespace clang;

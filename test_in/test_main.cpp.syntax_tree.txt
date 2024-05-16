@@ -141,7 +141,7 @@ TranslationUnitDecl 0x5d6d88f0b728 <<invalid sloc>> <invalid sloc>
 | |   |   |       | `-UnaryOperator 0x5d6d88f76170 <col:19, col:20> 'int' prefix '-'
 | |   |   |       |   `-IntegerLiteral 0x5d6d88f76150 <col:20> 'int' 1
 | |   |   |       `-UnaryOperator 0x5d6d88f761f0 <line:30:7, col:10> 'double' postfix '++'
-| |   |   |         `-DeclRefExpr 0x5d6d88f761d0 <col:7> 'double' lvalue Var 0x5d6d88f74af8 'sum' 'double'
+| |   |   |         `-DeclRefExpr 0x5d6d88f761d0 <col:7> 'double' lvalue VFIR 0x5d6d88f74af8 'sum' 'double'
 | |   |   |-BreakStmt 0x5d6d88f76208 <line:31:7>
 | |   |   |-CaseStmt 0x5d6d88f76250 <line:32:7, line:37:7>
 | |   |   | |-ConstantExpr 0x5d6d88f76230 <line:32:12> 'int'
@@ -152,7 +152,7 @@ TranslationUnitDecl 0x5d6d88f0b728 <<invalid sloc>> <invalid sloc>
 | |   |   |   | `-VarDecl 0x5d6d88f762d0 <col:7, col:20> col:20 pnt4 'struct Point':'Point' callinit
 | |   |   |   |   `-CXXConstructExpr 0x5d6d88f768e8 <col:20> 'struct Point':'Point' 'void () noexcept'
 | |   |   |   |-BinaryOperator 0x5d6d88f76a68 <line:35:9, col:21> 'char' lvalue '='
-| |   |   |   | |-DeclRefExpr 0x5d6d88f76928 <col:9> 'char' lvalue Var 0x5d6d88f75e68 'L' 'char'
+| |   |   |   | |-DeclRefExpr 0x5d6d88f76928 <col:9> 'char' lvalue VFIR 0x5d6d88f75e68 'L' 'char'
 | |   |   |   | `-ImplicitCastExpr 0x5d6d88f76a50 <col:11, col:21> 'char' <IntegralCast>
 | |   |   |   |   `-BinaryOperator 0x5d6d88f76a30 <col:11, col:21> 'int' '%'
 | |   |   |   |     |-ParenExpr 0x5d6d88f769f0 <col:11, col:19> 'int'
@@ -166,7 +166,7 @@ TranslationUnitDecl 0x5d6d88f0b728 <<invalid sloc>> <invalid sloc>
 | |   |   |   `-ReturnStmt 0x5d6d88f76b28 <line:36:9, col:19>
 | |   |   |     `-BinaryOperator 0x5d6d88f76b08 <col:16, col:19> 'char *' '+'
 | |   |   |       |-UnaryOperator 0x5d6d88f76aa8 <col:16, col:17> 'char *' prefix '&' cannot overflow
-| |   |   |       | `-DeclRefExpr 0x5d6d88f76a88 <col:17> 'char' lvalue Var 0x5d6d88f75e68 'L' 'char'
+| |   |   |       | `-DeclRefExpr 0x5d6d88f76a88 <col:17> 'char' lvalue VFIR 0x5d6d88f75e68 'L' 'char'
 | |   |   |       `-IntegerLiteral 0x5d6d88f76ae8 <col:19> 'int' 1
 | |   |   |-CaseStmt 0x5d6d88f76ba0 <line:40:7, line:41:38>
 | |   |   | |-ConstantExpr 0x5d6d88f76b80 <line:40:12> 'int'
@@ -175,7 +175,7 @@ TranslationUnitDecl 0x5d6d88f0b728 <<invalid sloc>> <invalid sloc>
 | |   |   | `-DeclStmt 0x5d6d88f76c48 <line:41:9, col:38>
 | |   |   |   `-VarDecl 0x5d6d88f76be0 <col:9, col:34> col:34 used unit 'int'
 | |   |   |-BinaryOperator 0x5d6d88f76ca0 <line:42:9, col:14> 'int' lvalue '='
-| |   |   | |-DeclRefExpr 0x5d6d88f76c60 <col:9> 'int' lvalue Var 0x5d6d88f76be0 'unit' 'int'
+| |   |   | |-DeclRefExpr 0x5d6d88f76c60 <col:9> 'int' lvalue VFIR 0x5d6d88f76be0 'unit' 'int'
 | |   |   | `-IntegerLiteral 0x5d6d88f76c80 <col:14> 'int' 18
 | |   |   |-ReturnStmt 0x5d6d88f76cf8 <line:43:9, col:16>
 | |   |   | `-ImplicitCastExpr 0x5d6d88f76ce0 <col:16> 'char *' <NullToPointer>
@@ -194,10 +194,10 @@ TranslationUnitDecl 0x5d6d88f0b728 <<invalid sloc>> <invalid sloc>
 | |   |   |     `-BinaryOperator 0x5d6d88f77ed0 <col:34, col:36> 'int' '*'
 | |   |   |       |-ImplicitCastExpr 0x5d6d88f77e88 <col:34> 'int' <IntegralCast>
 | |   |   |       | `-ImplicitCastExpr 0x5d6d88f77e70 <col:34> 'char' <LValueToRValue>
-| |   |   |       |   `-DeclRefExpr 0x5d6d88f77e30 <col:34> 'char' lvalue Var 0x5d6d88f75e68 'L' 'char'
+| |   |   |       |   `-DeclRefExpr 0x5d6d88f77e30 <col:34> 'char' lvalue VFIR 0x5d6d88f75e68 'L' 'char'
 | |   |   |       `-ImplicitCastExpr 0x5d6d88f77eb8 <col:36> 'int' <IntegralCast>
 | |   |   |         `-ImplicitCastExpr 0x5d6d88f77ea0 <col:36> 'char' <LValueToRValue>
-| |   |   |           `-DeclRefExpr 0x5d6d88f77e50 <col:36> 'char' lvalue Var 0x5d6d88f75e68 'L' 'char'
+| |   |   |           `-DeclRefExpr 0x5d6d88f77e50 <col:36> 'char' lvalue VFIR 0x5d6d88f75e68 'L' 'char'
 | |   |   |-UnaryOperator 0x5d6d88f77f30 <line:47:9, col:12> 'int' postfix '++'
 | |   |   | `-DeclRefExpr 0x5d6d88f77f10 <col:9> 'int' lvalue ParmVar 0x5d6d88f526f0 'cnt' 'int'
 | |   |   |-BreakStmt 0x5d6d88f77f48 <line:48:9>
@@ -207,27 +207,27 @@ TranslationUnitDecl 0x5d6d88f0b728 <<invalid sloc>> <invalid sloc>
 | |   |   | | `-IntegerLiteral 0x5d6d88f77f50 <col:12> 'int' 3
 | |   |   | `-ReturnStmt 0x5d6d88f77ff0 <line:50:9, col:38>
 | |   |   |   `-UnaryOperator 0x5d6d88f77fd8 <col:37, col:38> 'char *' prefix '&' cannot overflow
-| |   |   |     `-DeclRefExpr 0x5d6d88f77fb8 <col:38> 'char' lvalue Var 0x5d6d88f75e68 'L' 'char'
+| |   |   |     `-DeclRefExpr 0x5d6d88f77fb8 <col:38> 'char' lvalue VFIR 0x5d6d88f75e68 'L' 'char'
 | |   |   |-CaseStmt 0x5d6d88f78040 <line:51:7, line:57:7>
 | |   |   | |-ConstantExpr 0x5d6d88f78020 <line:51:12> 'int'
 | |   |   | | |-value: Int 4
 | |   |   | | `-IntegerLiteral 0x5d6d88f78000 <col:12> 'int' 4
 | |   |   | `-CompoundStmt 0x5d6d88f78508 <line:52:7, line:57:7>
 | |   |   |   |-UnaryOperator 0x5d6d88f78088 <line:53:9, col:10> 'char' postfix '++' cannot overflow
-| |   |   |   | `-DeclRefExpr 0x5d6d88f78068 <col:9> 'char' lvalue Var 0x5d6d88f75e68 'L' 'char'
+| |   |   |   | `-DeclRefExpr 0x5d6d88f78068 <col:9> 'char' lvalue VFIR 0x5d6d88f75e68 'L' 'char'
 | |   |   |   |-BinaryOperator 0x5d6d88f78180 <line:54:9, col:15> 'double' lvalue '='
-| |   |   |   | |-DeclRefExpr 0x5d6d88f780a0 <col:9> 'double' lvalue Var 0x5d6d88f74af8 'sum' 'double'
+| |   |   |   | |-DeclRefExpr 0x5d6d88f780a0 <col:9> 'double' lvalue VFIR 0x5d6d88f74af8 'sum' 'double'
 | |   |   |   | `-BinaryOperator 0x5d6d88f78160 <col:13, col:15> 'double' '+'
 | |   |   |   |   |-ImplicitCastExpr 0x5d6d88f78148 <col:13> 'double' <IntegralToFloating>
 | |   |   |   |   | `-ImplicitCastExpr 0x5d6d88f78118 <col:13> 'int' <IntegralCast>
 | |   |   |   |   |   `-ImplicitCastExpr 0x5d6d88f78100 <col:13> 'char' <LValueToRValue>
-| |   |   |   |   |     `-DeclRefExpr 0x5d6d88f780c0 <col:13> 'char' lvalue Var 0x5d6d88f75e68 'L' 'char'
+| |   |   |   |   |     `-DeclRefExpr 0x5d6d88f780c0 <col:13> 'char' lvalue VFIR 0x5d6d88f75e68 'L' 'char'
 | |   |   |   |   `-ImplicitCastExpr 0x5d6d88f78130 <col:15> 'double' <LValueToRValue>
-| |   |   |   |     `-DeclRefExpr 0x5d6d88f780e0 <col:15> 'double' lvalue Var 0x5d6d88f74af8 'sum' 'double'
+| |   |   |   |     `-DeclRefExpr 0x5d6d88f780e0 <col:15> 'double' lvalue VFIR 0x5d6d88f74af8 'sum' 'double'
 | |   |   |   |-IfStmt 0x5d6d88f78208 <line:55:9, col:22>
 | |   |   |   | |-ImplicitCastExpr 0x5d6d88f781d8 <col:13> 'bool' <IntegralToBoolean>
 | |   |   |   | | `-ImplicitCastExpr 0x5d6d88f781c0 <col:13> 'char' <LValueToRValue>
-| |   |   |   | |   `-DeclRefExpr 0x5d6d88f781a0 <col:13> 'char' lvalue Var 0x5d6d88f75e68 'L' 'char'
+| |   |   |   | |   `-DeclRefExpr 0x5d6d88f781a0 <col:13> 'char' lvalue VFIR 0x5d6d88f75e68 'L' 'char'
 | |   |   |   | `-GotoStmt 0x5d6d88f781f0 <col:17, col:22> 'start' 0x5d6d88f75ee8
 | |   |   |   `-DeclStmt 0x5d6d88f784f0 <line:56:7, col:44>
 | |   |   |     |-VarDecl 0x5d6d88f78248 <col:7, col:20> col:20 pnt5 'struct Point':'Point' callinit
@@ -238,7 +238,7 @@ TranslationUnitDecl 0x5d6d88f0b728 <<invalid sloc>> <invalid sloc>
 | |   |   |     | `-CXXConstructExpr 0x5d6d88f78410 <col:30> 'struct Point':'Point' 'void () noexcept'
 | |   |   |     `-VarDecl 0x5d6d88f78460 <col:7, col:36> col:36 ptr_pnt8 'struct Point *'
 | |   |   |-BinaryOperator 0x5d6d88f78590 <line:58:7, col:10> 'float' lvalue '='
-| |   |   | |-DeclRefExpr 0x5d6d88f78538 <col:7> 'float' lvalue Var 0x5d6d88f75dd8 'PI' 'float'
+| |   |   | |-DeclRefExpr 0x5d6d88f78538 <col:7> 'float' lvalue VFIR 0x5d6d88f75dd8 'PI' 'float'
 | |   |   | `-ImplicitCastExpr 0x5d6d88f78578 <col:10> 'float' <FloatingCast>
 | |   |   |   `-FloatingLiteral 0x5d6d88f78558 <col:10> 'double' 3.140000e+00
 | |   |   |-ReturnStmt 0x5d6d88f78628 <line:59:7, col:21>
@@ -272,7 +272,7 @@ TranslationUnitDecl 0x5d6d88f0b728 <<invalid sloc>> <invalid sloc>
 | |   |   |   `-BreakStmt 0x5d6d88f78b68 <line:68:9>
 | |   |   |-DefaultStmt 0x5d6d88f78ca0 <line:70:7, line:71:41>
 | |   |   | `-CompoundAssignOperator 0x5d6d88f78c70 <col:9, col:41> 'double' lvalue '+=' ComputeLHSTy='double' ComputeResultTy='double'
-| |   |   |   |-DeclRefExpr 0x5d6d88f78b90 <col:9> 'double' lvalue Var 0x5d6d88f74af8 'sum' 'double'
+| |   |   |   |-DeclRefExpr 0x5d6d88f78b90 <col:9> 'double' lvalue VFIR 0x5d6d88f74af8 'sum' 'double'
 | |   |   |   `-ImplicitCastExpr 0x5d6d88f78c58 <col:37, col:41> 'double' <IntegralToFloating>
 | |   |   |     `-BinaryOperator 0x5d6d88f78c38 <col:37, col:41> 'int' '*'
 | |   |   |       |-ImplicitCastExpr 0x5d6d88f78c08 <col:37> 'int' <IntegralCast>
@@ -282,7 +282,7 @@ TranslationUnitDecl 0x5d6d88f0b728 <<invalid sloc>> <invalid sloc>
 | |   |   |         `-DeclRefExpr 0x5d6d88f78bd0 <col:41> 'int' lvalue ParmVar 0x5d6d88f526f0 'cnt' 'int'
 | |   |   `-ReturnStmt 0x5d6d88f78cf8 <line:72:9, col:17>
 | |   |     `-UnaryOperator 0x5d6d88f78ce0 <col:16, col:17> 'char *' prefix '&' cannot overflow
-| |   |       `-DeclRefExpr 0x5d6d88f78cc0 <col:17> 'char' lvalue Var 0x5d6d88f75e68 'L' 'char'
+| |   |       `-DeclRefExpr 0x5d6d88f78cc0 <col:17> 'char' lvalue VFIR 0x5d6d88f75e68 'L' 'char'
 | |   `-ReturnStmt 0x5d6d88f7a7c0 <line:74:5, col:12>
 | |     `-ImplicitCastExpr 0x5d6d88f7a7a8 <col:12> 'char *' <NullToPointer>
 | |       `-IntegerLiteral 0x5d6d88f7a788 <col:12> 'int' 0
@@ -311,11 +311,11 @@ TranslationUnitDecl 0x5d6d88f0b728 <<invalid sloc>> <invalid sloc>
     | |-DeclStmt 0x5d6d88f7b658 <line:85:9, col:34>
     | | `-VarDecl 0x5d6d88f7b588 <col:9, col:30> col:24 ptr1 'struct Point *' cinit
     | |   `-UnaryOperator 0x5d6d88f7b610 <col:29, col:30> 'Point *' prefix '&' cannot overflow
-    | |     `-DeclRefExpr 0x5d6d88f7b5f0 <col:30> 'Point' lvalue Var 0x5d6d88f7b398 'pnt1' 'Point'
+    | |     `-DeclRefExpr 0x5d6d88f7b5f0 <col:30> 'Point' lvalue VFIR 0x5d6d88f7b398 'pnt1' 'Point'
     | |-DeclStmt 0x5d6d88f70ec8 <line:86:9, col:34>
     | | `-VarDecl 0x5d6d88f70e00 <col:9, col:30> col:24 ptr2 'struct Point *' cinit
     | |   `-UnaryOperator 0x5d6d88f70e88 <col:29, col:30> 'struct Point *' prefix '&' cannot overflow
-    | |     `-DeclRefExpr 0x5d6d88f70e68 <col:30> 'struct Point':'Point' lvalue Var 0x5d6d88f7b4b8 'pnt2' 'struct Point':'Point'
+    | |     `-DeclRefExpr 0x5d6d88f70e68 <col:30> 'struct Point':'Point' lvalue VFIR 0x5d6d88f7b4b8 'pnt2' 'struct Point':'Point'
     | `-DeclStmt 0x5d6d88f70f90 <line:87:9, col:26>
     |   `-VarDecl 0x5d6d88f70f00 <col:9, col:22> col:22 pnt3 'struct Point':'Point' callinit
     |     `-CXXConstructExpr 0x5d6d88f70f68 <col:22> 'struct Point':'Point' 'void () noexcept'

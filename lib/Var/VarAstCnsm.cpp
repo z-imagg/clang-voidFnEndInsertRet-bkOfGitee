@@ -1,6 +1,6 @@
-#include "Var/VarAstCnsm.h"
-#include "Var/CollectIncMacro_PPCb.h"
-#include "Var/Constant.h"
+#include "VFIR/VarAstCnsm.h"
+#include "VFIR/CollectIncMacro_PPCb.h"
+#include "VFIR/Constant.h"
 
 #include "base/MyAssert.h"
 

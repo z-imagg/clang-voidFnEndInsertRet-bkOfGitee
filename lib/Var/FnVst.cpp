@@ -1,12 +1,12 @@
-#include "Var/FnVst.h"
+#include "VFIR/FnVst.h"
 
 #include "clang/AST/AST.h"
 #include "clang/AST/RecursiveASTVisitor.h"
 #include "clang/Frontend/CompilerInstance.h"
 #include "clang/Frontend/FrontendPluginRegistry.h"
 #include "base/Util.h"
-#include "Var/RangeHasMacroAstVst.h"
-#include "Var/CollectIncMacro_PPCb.h"
+#include "VFIR/RangeHasMacroAstVst.h"
+#include "VFIR/CollectIncMacro_PPCb.h"
 #include <vector>
 
 #include <fmt/core.h>
