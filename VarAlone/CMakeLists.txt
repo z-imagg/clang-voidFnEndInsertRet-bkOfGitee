@@ -8,7 +8,7 @@ MESSAGE("CMAKE_CURRENT_SOURCE_DIR: ${CMAKE_CURRENT_SOURCE_DIR}")
 
 set(VFIRAlone_SOURCES
 "${CMAKE_CURRENT_SOURCE_DIR}/../base_home/impl/base/ActMain.cpp"
-"${CMAKE_CURRENT_SOURCE_DIR}/../VFIRAlone/VarMain.cpp"
+"${CMAKE_CURRENT_SOURCE_DIR}/../VFIRAlone/VFIRMain.cpp"
 
 "${CMAKE_CURRENT_SOURCE_DIR}/../base_home/impl/base/Util.cpp"
 "${CMAKE_CURRENT_SOURCE_DIR}/../base_home/impl/base/LocId.cpp"
