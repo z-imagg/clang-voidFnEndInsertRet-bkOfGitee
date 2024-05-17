@@ -22,6 +22,13 @@ clgPlg_name=VFIRPlugin
   ```
 参考: https://www.ibm.com/docs/en/xl-c-and-cpp-linux/16.1.0?topic=cla-running-user-defined-actions-by-using-clang-plug-ins
 
+###### 写作CXXFLAGS、CFLAGS以在clang编译命令中运行插件VFIRPlugin
+```shell
+Clang_VFIRPlugin_run=" -Xclang   -load -Xclang /fridaAnlzAp/clang-voidFnEndInsertRet/build/lib/libVFIRPlugin.so  -Xclang   -add-plugin -Xclang  VFIRPlugin "
+CXXFLAGS=$Clang_VFIRPlugin_run
+CFLAGS=$Clang_VFIRPlugin_run
+
+```
 ###### 指定环境变量运行插件
  指定环境变量 `clangPlgVerbose_voidFnEndInsertRet=true|false|空即false` 控制 是否在注释中输出完整路径_行号_列号
 
