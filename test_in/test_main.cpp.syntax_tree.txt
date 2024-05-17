@@ -1,21 +1,21 @@
-TranslationUnitDecl 0x5d6d88f0b728 <<invalid sloc>> <invalid sloc>
-|-TypedefDecl 0x5d6d88f0bf90 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
-| `-BuiltinType 0x5d6d88f0bcf0 '__int128'
-|-TypedefDecl 0x5d6d88f0c000 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
-| `-BuiltinType 0x5d6d88f0bd10 'unsigned __int128'
-|-TypedefDecl 0x5d6d88f0c378 <<invalid sloc>> <invalid sloc> implicit __NSConstantString '__NSConstantString_tag'
-| `-RecordType 0x5d6d88f0c0f0 '__NSConstantString_tag'
-|   `-CXXRecord 0x5d6d88f0c058 '__NSConstantString_tag'
-|-TypedefDecl 0x5d6d88f0c410 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
-| `-PointerType 0x5d6d88f0c3d0 'char *'
-|   `-BuiltinType 0x5d6d88f0b7d0 'char'
-|-TypedefDecl 0x5d6d88f51d88 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list '__va_list_tag[1]'
-| `-ConstantArrayType 0x5d6d88f51d30 '__va_list_tag[1]' 1 
-|   `-RecordType 0x5d6d88f0c500 '__va_list_tag'
-|     `-CXXRecord 0x5d6d88f0c468 '__va_list_tag'
-|-TypedefDecl 0x5d6d88f51df8 </fridaAnlzAp/clang-voidFnEndInsertRet/test_in/test_main.cpp:3:1, col:16> col:16 referenced DOUBLE_typedef 'double'
-| `-BuiltinType 0x5d6d88f0b950 'double'
-|-CXXRecordDecl 0x5d6d88f51e50 <line:5:1, line:8:1> line:5:8 referenced struct Point definition
+TranslationUnitDecl 0x57cf05cf6758 <<invalid sloc>> <invalid sloc>
+|-TypedefDecl 0x57cf05cf6fc0 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
+| `-BuiltinType 0x57cf05cf6d20 '__int128'
+|-TypedefDecl 0x57cf05cf7030 <<invalid sloc>> <invalid sloc> implicit __uint128_t 'unsigned __int128'
+| `-BuiltinType 0x57cf05cf6d40 'unsigned __int128'
+|-TypedefDecl 0x57cf05cf73a8 <<invalid sloc>> <invalid sloc> implicit __NSConstantString '__NSConstantString_tag'
+| `-RecordType 0x57cf05cf7120 '__NSConstantString_tag'
+|   `-CXXRecord 0x57cf05cf7088 '__NSConstantString_tag'
+|-TypedefDecl 0x57cf05cf7440 <<invalid sloc>> <invalid sloc> implicit __builtin_ms_va_list 'char *'
+| `-PointerType 0x57cf05cf7400 'char *'
+|   `-BuiltinType 0x57cf05cf6800 'char'
+|-TypedefDecl 0x57cf05d3ca88 <<invalid sloc>> <invalid sloc> implicit __builtin_va_list '__va_list_tag[1]'
+| `-ConstantArrayType 0x57cf05d3ca30 '__va_list_tag[1]' 1 
+|   `-RecordType 0x57cf05cf7530 '__va_list_tag'
+|     `-CXXRecord 0x57cf05cf7498 '__va_list_tag'
+|-TypedefDecl 0x57cf05d3caf8 </fridaAnlzAp/clang-voidFnEndInsertRet/test_in/test_main.cpp:3:1, col:16> col:16 DOUBLE_typedef 'double'
+| `-BuiltinType 0x57cf05cf6980 'double'
+|-CXXRecordDecl 0x57cf05d3cb50 <line:5:1, line:8:1> line:5:8 referenced struct Point definition
 | |-DefinitionData pass_in_registers aggregate standard_layout trivially_copyable pod trivial literal
 | | |-DefaultConstructor exists trivial
 | | |-CopyConstructor simple trivial has_const_param implicit_has_const_param
@@ -23,16 +23,16 @@ TranslationUnitDecl 0x5d6d88f0b728 <<invalid sloc>> <invalid sloc>
 | | |-CopyAssignment simple trivial has_const_param needs_implicit implicit_has_const_param
 | | |-MoveAssignment exists simple trivial needs_implicit
 | | `-Destructor simple irrelevant trivial needs_implicit
-| |-CXXRecordDecl 0x5d6d88f51f68 <col:1, col:8> col:8 implicit struct Point
-| |-FieldDecl 0x5d6d88f52010 <line:6:5, col:11> col:11 x 'float'
-| |-FieldDecl 0x5d6d88f52078 <line:7:5, col:12> col:12 y 'double'
-| |-CXXConstructorDecl 0x5d6d88f76350 <line:5:8> col:8 implicit used Point 'void () noexcept' inline default trivial
-| | `-CompoundStmt 0x5d6d88f767a8 <col:8>
-| |-CXXConstructorDecl 0x5d6d88f76458 <col:8> col:8 implicit constexpr Point 'void (const Point &)' inline default trivial noexcept-unevaluated 0x5d6d88f76458
-| | `-ParmVFIRDecl 0x5d6d88f76568 <col:8> col:8 'const Point &'
-| `-CXXConstructorDecl 0x5d6d88f76618 <col:8> col:8 implicit constexpr Point 'void (Point &&)' inline default trivial noexcept-unevaluated 0x5d6d88f76618
-|   `-ParmVFIRDecl 0x5d6d88f76728 <col:8> col:8 'Point &&'
-|-CXXRecordDecl 0x5d6d88f520e0 <line:9:1, col:18> col:7 referenced class UserEntity definition
+| |-CXXRecordDecl 0x57cf05d3cc68 <col:1, col:8> col:8 implicit struct Point
+| |-FieldDecl 0x57cf05d3cd10 <line:6:5, col:11> col:11 referenced x 'float'
+| |-FieldDecl 0x57cf05d3cd78 <line:7:5, col:12> col:12 referenced y 'double'
+| |-CXXConstructorDecl 0x57cf05d5cb08 <line:5:8> col:8 implicit used Point 'void () noexcept' inline default trivial
+| | `-CompoundStmt 0x57cf05d5ec78 <col:8>
+| |-CXXConstructorDecl 0x57cf05d5cc08 <col:8> col:8 implicit constexpr Point 'void (const Point &)' inline default trivial noexcept-unevaluated 0x57cf05d5cc08
+| | `-ParmVarDecl 0x57cf05d5ea38 <col:8> col:8 'const Point &'
+| `-CXXConstructorDecl 0x57cf05d5eae8 <col:8> col:8 implicit constexpr Point 'void (Point &&)' inline default trivial noexcept-unevaluated 0x57cf05d5eae8
+|   `-ParmVarDecl 0x57cf05d5ebf8 <col:8> col:8 'Point &&'
+|-CXXRecordDecl 0x57cf05d3cde0 <line:9:1, col:18> col:7 referenced class UserEntity definition
 | |-DefinitionData pass_in_registers empty aggregate standard_layout trivially_copyable pod trivial literal has_constexpr_non_copy_move_ctor can_const_default_init
 | | |-DefaultConstructor exists trivial constexpr defaulted_is_constexpr
 | | |-CopyConstructor simple trivial has_const_param implicit_has_const_param
@@ -40,284 +40,188 @@ TranslationUnitDecl 0x5d6d88f0b728 <<invalid sloc>> <invalid sloc>
 | | |-CopyAssignment simple trivial has_const_param needs_implicit implicit_has_const_param
 | | |-MoveAssignment exists simple trivial needs_implicit
 | | `-Destructor simple irrelevant trivial needs_implicit
-| |-CXXRecordDecl 0x5d6d88f521f8 <col:1, col:7> col:7 implicit class UserEntity
-| |-CXXConstructorDecl 0x5d6d88f73d80 <col:7> col:7 implicit used constexpr UserEntity 'void () noexcept' inline default trivial
-| | `-CompoundStmt 0x5d6d88f74238 <col:7>
-| |-CXXConstructorDecl 0x5d6d88f73eb8 <col:7> col:7 implicit constexpr UserEntity 'void (const UserEntity &)' inline default trivial noexcept-unevaluated 0x5d6d88f73eb8
-| | `-ParmVFIRDecl 0x5d6d88f73fc8 <col:7> col:7 'const UserEntity &'
-| `-CXXConstructorDecl 0x5d6d88f74078 <col:7> col:7 implicit constexpr UserEntity 'void (UserEntity &&)' inline default trivial noexcept-unevaluated 0x5d6d88f74078
-|   `-ParmVFIRDecl 0x5d6d88f74188 <col:7> col:7 'UserEntity &&'
-|-CXXRecordDecl 0x5d6d88f522a0 <line:10:1, col:21> col:7 referenced class ScoreRelation definition
+| |-CXXRecordDecl 0x57cf05d3cef8 <col:1, col:7> col:7 implicit class UserEntity
+| |-CXXConstructorDecl 0x57cf05d5c4e0 <col:7> col:7 implicit used constexpr UserEntity 'void () noexcept' inline default trivial
+| | `-CompoundStmt 0x57cf05d5c938 <col:7>
+| |-CXXConstructorDecl 0x57cf05d5c5e8 <col:7> col:7 implicit constexpr UserEntity 'void (const UserEntity &)' inline default trivial noexcept-unevaluated 0x57cf05d5c5e8
+| | `-ParmVarDecl 0x57cf05d5c6f8 <col:7> col:7 'const UserEntity &'
+| `-CXXConstructorDecl 0x57cf05d5c7a8 <col:7> col:7 implicit constexpr UserEntity 'void (UserEntity &&)' inline default trivial noexcept-unevaluated 0x57cf05d5c7a8
+|   `-ParmVarDecl 0x57cf05d5c8b8 <col:7> col:7 'UserEntity &&'
+|-CXXRecordDecl 0x57cf05d3cfa0 <line:10:1, col:21> col:7 class ScoreRelation definition
 | |-DefinitionData pass_in_registers empty aggregate standard_layout trivially_copyable pod trivial literal has_constexpr_non_copy_move_ctor can_const_default_init
-| | |-DefaultConstructor exists trivial constexpr defaulted_is_constexpr
-| | |-CopyConstructor simple trivial has_const_param implicit_has_const_param
-| | |-MoveConstructor exists simple trivial
+| | |-DefaultConstructor exists trivial constexpr needs_implicit defaulted_is_constexpr
+| | |-CopyConstructor simple trivial has_const_param needs_implicit implicit_has_const_param
+| | |-MoveConstructor exists simple trivial needs_implicit
 | | |-CopyAssignment simple trivial has_const_param needs_implicit implicit_has_const_param
 | | |-MoveAssignment exists simple trivial needs_implicit
 | | `-Destructor simple irrelevant trivial needs_implicit
-| |-CXXRecordDecl 0x5d6d88f523b8 <col:1, col:7> col:7 implicit class ScoreRelation
-| |-CXXConstructorDecl 0x5d6d88f74408 <col:7> col:7 implicit used constexpr ScoreRelation 'void () noexcept' inline default trivial
-| | `-CompoundStmt 0x5d6d88f74858 <col:7>
-| |-CXXConstructorDecl 0x5d6d88f74508 <col:7> col:7 implicit constexpr ScoreRelation 'void (const ScoreRelation &)' inline default trivial noexcept-unevaluated 0x5d6d88f74508
-| | `-ParmVFIRDecl 0x5d6d88f74618 <col:7> col:7 'const ScoreRelation &'
-| `-CXXConstructorDecl 0x5d6d88f746c8 <col:7> col:7 implicit constexpr ScoreRelation 'void (ScoreRelation &&)' inline default trivial noexcept-unevaluated 0x5d6d88f746c8
-|   `-ParmVFIRDecl 0x5d6d88f747d8 <col:7> col:7 'ScoreRelation &&'
-|-CXXRecordDecl 0x5d6d88f52460 <line:11:1, line:76:1> line:11:7 referenced class MyClass definition
-| |-DefinitionData pass_in_registers empty aggregate standard_layout trivially_copyable pod trivial literal has_constexpr_non_copy_move_ctor can_const_default_init
-| | |-DefaultConstructor exists trivial constexpr defaulted_is_constexpr
+| `-CXXRecordDecl 0x57cf05d3d0b8 <col:1, col:7> col:7 implicit class ScoreRelation
+|-CXXRecordDecl 0x57cf05d3d160 <line:11:1, line:52:1> line:11:7 referenced class MyClass definition
+| |-DefinitionData standard_layout has_user_declared_ctor can_const_default_init
+| | |-DefaultConstructor exists non_trivial user_provided
 | | |-CopyConstructor simple trivial has_const_param implicit_has_const_param
-| | |-MoveConstructor exists simple trivial
+| | |-MoveConstructor
 | | |-CopyAssignment simple trivial has_const_param needs_implicit implicit_has_const_param
-| | |-MoveAssignment exists simple trivial needs_implicit
-| | `-Destructor simple irrelevant trivial needs_implicit
-| |-CXXRecordDecl 0x5d6d88f52578 <col:1, col:7> col:7 implicit class MyClass
-| |-AccessSpecDecl 0x5d6d88f52608 <line:12:1, col:7> col:1 public
-| |-VFIRDecl 0x5d6d88f52648 <line:13:5, col:16> col:16 ZERO 'int' static
-| |-AccessSpecDecl 0x5d6d88f526b0 <line:14:1, col:7> col:1 public
-| |-CXXMethodDecl 0x5d6d88f52880 <line:16:3, line:75:3> line:16:9 switchDemo 'char *(int, short)' implicit-inline
-| | |-ParmVFIRDecl 0x5d6d88f526f0 <col:20, col:24> col:24 used cnt 'int'
-| | |-ParmVFIRDecl 0x5d6d88f52770 <col:29, col:35> col:35 used chr 'short'
-| | `-CompoundStmt 0x5d6d88f7a7d0 <col:39, line:75:3>
-| |   |-DeclStmt 0x5d6d88f52a18 <line:17:3, col:16>
-| |   | `-VFIRDecl 0x5d6d88f529b0 <col:3, col:8> col:8 myIntPtr 'int *'
-| |   |-DeclStmt 0x5d6d88f52bb8 <line:18:3, col:13>
-| |   | |-VFIRDecl 0x5d6d88f52a40 <col:3, col:8> col:8 x 'char'
-| |   | |-VFIRDecl 0x5d6d88f52ab8 <col:3, col:10> col:10 y 'char'
-| |   | `-VFIRDecl 0x5d6d88f52b30 <col:3, col:12> col:12 z 'char'
-| |   |-DeclStmt 0x5d6d88f73cd8 <line:19:3, col:18>
-| |   | |-VFIRDecl 0x5d6d88f52be8 <col:3, col:7> col:7 i1 'int'
-| |   | |-VFIRDecl 0x5d6d88f52c68 <col:3, col:10> col:10 i2 'int'
-| |   | `-VFIRDecl 0x5d6d88f73c50 <col:3, col:14> col:14 p_i3 'int *'
-| |   |-DeclStmt 0x5d6d88f74360 <line:20:3, col:19>
-| |   | `-VFIRDecl 0x5d6d88f73d00 <col:3, col:14> col:14 admin 'UserEntity' callinit
-| |   |   `-CXXConstructExpr 0x5d6d88f74338 <col:14> 'UserEntity' 'void () noexcept'
-| |   |-DeclStmt 0x5d6d88f74980 <line:21:3, col:27>
-| |   | `-VFIRDecl 0x5d6d88f74388 <col:3, col:17> col:17 scoreRlatn 'ScoreRelation' callinit
-| |   |   `-CXXConstructExpr 0x5d6d88f74958 <col:17> 'ScoreRelation' 'void () noexcept'
-| |   |-DeclStmt 0x5d6d88f74a18 <line:2:15, line:22:16>
-| |   | `-VFIRDecl 0x5d6d88f749b0 <line:2:15, line:22:9> col:9 num_int 'int'
-| |   |-DeclStmt 0x5d6d88f74ac8 <line:23:3, col:28>
-| |   | `-VFIRDecl 0x5d6d88f74a60 <col:3, col:18> col:18 num_double 'DOUBLE_typedef':'double'
-| |   |-DeclStmt 0x5d6d88f75da8 <line:24:3, col:24>
-| |   | `-VFIRDecl 0x5d6d88f74af8 <col:3, col:21> col:10 used sum 'double' cinit
-| |   |   `-BinaryOperator 0x5d6d88f75d88 <col:14, col:21> 'double' '*'
-| |   |     |-BinaryOperator 0x5d6d88f74bd0 <col:14, col:17> 'double' '*'
-| |   |     | |-FloatingLiteral 0x5d6d88f74b60 <col:14> 'double' 1.000000e+00
-| |   |     | `-ImplicitCastExpr 0x5d6d88f74bb8 <col:17> 'double' <IntegralToFloating>
-| |   |     |   `-ImplicitCastExpr 0x5d6d88f74ba0 <col:17> 'int' <LValueToRValue>
-| |   |     |     `-DeclRefExpr 0x5d6d88f74b80 <col:17> 'int' lvalue ParmVar 0x5d6d88f526f0 'cnt' 'int'
-| |   |     `-ImplicitCastExpr 0x5d6d88f75d70 <col:21> 'double' <IntegralToFloating>
-| |   |       `-ImplicitCastExpr 0x5d6d88f74c28 <col:21> 'int' <IntegralCast>
-| |   |         `-ImplicitCastExpr 0x5d6d88f74c10 <col:21> 'short' <LValueToRValue>
-| |   |           `-DeclRefExpr 0x5d6d88f74bf0 <col:21> 'short' lvalue ParmVar 0x5d6d88f52770 'chr' 'short'
-| |   |-DeclStmt 0x5d6d88f75e40 <line:25:3, col:11>
-| |   | `-VFIRDecl 0x5d6d88f75dd8 <col:3, col:9> col:9 used PI 'float'
-| |   |-LabelStmt 0x5d6d88f75f38 <line:26:5, col:18> 'start'
-| |   | `-DeclStmt 0x5d6d88f75ed0 <col:12, col:18>
-| |   |   `-VFIRDecl 0x5d6d88f75e68 <col:12, col:17> col:17 used L 'char'
-| |   |-SwitchStmt 0x5d6d88f75fa8 <line:27:5, line:73:5>
-| |   | |-ImplicitCastExpr 0x5d6d88f75f90 <line:27:12> 'int' <IntegralCast>
-| |   | | `-ImplicitCastExpr 0x5d6d88f75f78 <col:12> 'short' <LValueToRValue>
-| |   | |   `-DeclRefExpr 0x5d6d88f75f58 <col:12> 'short' lvalue ParmVar 0x5d6d88f52770 'chr' 'short'
-| |   | `-CompoundStmt 0x5d6d88f7a6f0 <col:16, line:73:5>
-| |   |   |-CaseStmt 0x5d6d88f76028 <line:28:7, line:30:10>
-| |   |   | |-ConstantExpr 0x5d6d88f76008 <line:28:12, col:13> 'int'
-| |   |   | | |-value: Int -4
-| |   |   | | `-UnaryOperator 0x5d6d88f75ff0 <col:12, col:13> 'int' prefix '-'
-| |   |   | |   `-IntegerLiteral 0x5d6d88f75fd0 <col:13> 'int' 4
-| |   |   | `-CaseStmt 0x5d6d88f760a8 <col:17, line:30:10>
-| |   |   |   |-ConstantExpr 0x5d6d88f76088 <line:28:22, col:23> 'int'
-| |   |   |   | |-value: Int -3
-| |   |   |   | `-UnaryOperator 0x5d6d88f76070 <col:22, col:23> 'int' prefix '-'
-| |   |   |   |   `-IntegerLiteral 0x5d6d88f76050 <col:23> 'int' 3
-| |   |   |   `-CaseStmt 0x5d6d88f76128 <line:29:7, line:30:10>
-| |   |   |     |-ConstantExpr 0x5d6d88f76108 <line:29:12, col:13> 'int'
-| |   |   |     | |-value: Int -2
-| |   |   |     | `-UnaryOperator 0x5d6d88f760f0 <col:12, col:13> 'int' prefix '-'
-| |   |   |     |   `-IntegerLiteral 0x5d6d88f760d0 <col:13> 'int' 2
-| |   |   |     `-CaseStmt 0x5d6d88f761a8 <col:15, line:30:10>
-| |   |   |       |-ConstantExpr 0x5d6d88f76188 <line:29:19, col:20> 'int'
-| |   |   |       | |-value: Int -1
-| |   |   |       | `-UnaryOperator 0x5d6d88f76170 <col:19, col:20> 'int' prefix '-'
-| |   |   |       |   `-IntegerLiteral 0x5d6d88f76150 <col:20> 'int' 1
-| |   |   |       `-UnaryOperator 0x5d6d88f761f0 <line:30:7, col:10> 'double' postfix '++'
-| |   |   |         `-DeclRefExpr 0x5d6d88f761d0 <col:7> 'double' lvalue VFIR 0x5d6d88f74af8 'sum' 'double'
-| |   |   |-BreakStmt 0x5d6d88f76208 <line:31:7>
-| |   |   |-CaseStmt 0x5d6d88f76250 <line:32:7, line:37:7>
-| |   |   | |-ConstantExpr 0x5d6d88f76230 <line:32:12> 'int'
-| |   |   | | |-value: Int 0
-| |   |   | | `-IntegerLiteral 0x5d6d88f76210 <col:12> 'int' 0
-| |   |   | `-CompoundStmt 0x5d6d88f76b38 <line:33:7, line:37:7>
-| |   |   |   |-DeclStmt 0x5d6d88f76910 <line:34:7, col:24>
-| |   |   |   | `-VFIRDecl 0x5d6d88f762d0 <col:7, col:20> col:20 pnt4 'struct Point':'Point' callinit
-| |   |   |   |   `-CXXConstructExpr 0x5d6d88f768e8 <col:20> 'struct Point':'Point' 'void () noexcept'
-| |   |   |   |-BinaryOperator 0x5d6d88f76a68 <line:35:9, col:21> 'char' lvalue '='
-| |   |   |   | |-DeclRefExpr 0x5d6d88f76928 <col:9> 'char' lvalue VFIR 0x5d6d88f75e68 'L' 'char'
-| |   |   |   | `-ImplicitCastExpr 0x5d6d88f76a50 <col:11, col:21> 'char' <IntegralCast>
-| |   |   |   |   `-BinaryOperator 0x5d6d88f76a30 <col:11, col:21> 'int' '%'
-| |   |   |   |     |-ParenExpr 0x5d6d88f769f0 <col:11, col:19> 'int'
-| |   |   |   |     | `-BinaryOperator 0x5d6d88f769d0 <col:12, col:16> 'int' '+'
-| |   |   |   |     |   |-ImplicitCastExpr 0x5d6d88f76988 <col:12> 'int' <LValueToRValue>
-| |   |   |   |     |   | `-DeclRefExpr 0x5d6d88f76948 <col:12> 'int' lvalue ParmVar 0x5d6d88f526f0 'cnt' 'int'
-| |   |   |   |     |   `-ImplicitCastExpr 0x5d6d88f769b8 <col:16> 'int' <IntegralCast>
-| |   |   |   |     |     `-ImplicitCastExpr 0x5d6d88f769a0 <col:16> 'short' <LValueToRValue>
-| |   |   |   |     |       `-DeclRefExpr 0x5d6d88f76968 <col:16> 'short' lvalue ParmVar 0x5d6d88f52770 'chr' 'short'
-| |   |   |   |     `-IntegerLiteral 0x5d6d88f76a10 <col:21> 'int' 50
-| |   |   |   `-ReturnStmt 0x5d6d88f76b28 <line:36:9, col:19>
-| |   |   |     `-BinaryOperator 0x5d6d88f76b08 <col:16, col:19> 'char *' '+'
-| |   |   |       |-UnaryOperator 0x5d6d88f76aa8 <col:16, col:17> 'char *' prefix '&' cannot overflow
-| |   |   |       | `-DeclRefExpr 0x5d6d88f76a88 <col:17> 'char' lvalue VFIR 0x5d6d88f75e68 'L' 'char'
-| |   |   |       `-IntegerLiteral 0x5d6d88f76ae8 <col:19> 'int' 1
-| |   |   |-CaseStmt 0x5d6d88f76ba0 <line:40:7, line:41:38>
-| |   |   | |-ConstantExpr 0x5d6d88f76b80 <line:40:12> 'int'
-| |   |   | | |-value: Int 1
-| |   |   | | `-IntegerLiteral 0x5d6d88f76b60 <col:12> 'int' 1
-| |   |   | `-DeclStmt 0x5d6d88f76c48 <line:41:9, col:38>
-| |   |   |   `-VFIRDecl 0x5d6d88f76be0 <col:9, col:34> col:34 used unit 'int'
-| |   |   |-BinaryOperator 0x5d6d88f76ca0 <line:42:9, col:14> 'int' lvalue '='
-| |   |   | |-DeclRefExpr 0x5d6d88f76c60 <col:9> 'int' lvalue VFIR 0x5d6d88f76be0 'unit' 'int'
-| |   |   | `-IntegerLiteral 0x5d6d88f76c80 <col:14> 'int' 18
-| |   |   |-ReturnStmt 0x5d6d88f76cf8 <line:43:9, col:16>
-| |   |   | `-ImplicitCastExpr 0x5d6d88f76ce0 <col:16> 'char *' <NullToPointer>
-| |   |   |   `-IntegerLiteral 0x5d6d88f76cc0 <col:16> 'int' 0
-| |   |   |-CaseStmt 0x5d6d88f77d80 <line:1:22, line:46:36>
-| |   |   | |-ConstantExpr 0x5d6d88f76d40 <line:44:19, col:20> 'int'
-| |   |   | | |-value: Int -100
-| |   |   | | `-UnaryOperator 0x5d6d88f76d28 <col:19, col:20> 'int' prefix '-'
-| |   |   | |   `-IntegerLiteral 0x5d6d88f76d08 <col:20> 'int' 100
-| |   |   | `-CaseStmt 0x5d6d88f77de8 <line:45:7, line:46:36>
-| |   |   |   |-ConstantExpr 0x5d6d88f77dc8 <line:45:12> 'int'
-| |   |   |   | |-value: Int 2
-| |   |   |   | `-IntegerLiteral 0x5d6d88f77da8 <col:12> 'int' 2
-| |   |   |   `-BinaryOperator 0x5d6d88f77ef0 <line:46:9, col:36> 'int' lvalue '='
-| |   |   |     |-DeclRefExpr 0x5d6d88f77e10 <col:9> 'int' lvalue ParmVar 0x5d6d88f526f0 'cnt' 'int'
-| |   |   |     `-BinaryOperator 0x5d6d88f77ed0 <col:34, col:36> 'int' '*'
-| |   |   |       |-ImplicitCastExpr 0x5d6d88f77e88 <col:34> 'int' <IntegralCast>
-| |   |   |       | `-ImplicitCastExpr 0x5d6d88f77e70 <col:34> 'char' <LValueToRValue>
-| |   |   |       |   `-DeclRefExpr 0x5d6d88f77e30 <col:34> 'char' lvalue VFIR 0x5d6d88f75e68 'L' 'char'
-| |   |   |       `-ImplicitCastExpr 0x5d6d88f77eb8 <col:36> 'int' <IntegralCast>
-| |   |   |         `-ImplicitCastExpr 0x5d6d88f77ea0 <col:36> 'char' <LValueToRValue>
-| |   |   |           `-DeclRefExpr 0x5d6d88f77e50 <col:36> 'char' lvalue VFIR 0x5d6d88f75e68 'L' 'char'
-| |   |   |-UnaryOperator 0x5d6d88f77f30 <line:47:9, col:12> 'int' postfix '++'
-| |   |   | `-DeclRefExpr 0x5d6d88f77f10 <col:9> 'int' lvalue ParmVar 0x5d6d88f526f0 'cnt' 'int'
-| |   |   |-BreakStmt 0x5d6d88f77f48 <line:48:9>
-| |   |   |-CaseStmt 0x5d6d88f77f90 <line:49:7, line:50:38>
-| |   |   | |-ConstantExpr 0x5d6d88f77f70 <line:49:12> 'int'
-| |   |   | | |-value: Int 3
-| |   |   | | `-IntegerLiteral 0x5d6d88f77f50 <col:12> 'int' 3
-| |   |   | `-ReturnStmt 0x5d6d88f77ff0 <line:50:9, col:38>
-| |   |   |   `-UnaryOperator 0x5d6d88f77fd8 <col:37, col:38> 'char *' prefix '&' cannot overflow
-| |   |   |     `-DeclRefExpr 0x5d6d88f77fb8 <col:38> 'char' lvalue VFIR 0x5d6d88f75e68 'L' 'char'
-| |   |   |-CaseStmt 0x5d6d88f78040 <line:51:7, line:57:7>
-| |   |   | |-ConstantExpr 0x5d6d88f78020 <line:51:12> 'int'
-| |   |   | | |-value: Int 4
-| |   |   | | `-IntegerLiteral 0x5d6d88f78000 <col:12> 'int' 4
-| |   |   | `-CompoundStmt 0x5d6d88f78508 <line:52:7, line:57:7>
-| |   |   |   |-UnaryOperator 0x5d6d88f78088 <line:53:9, col:10> 'char' postfix '++' cannot overflow
-| |   |   |   | `-DeclRefExpr 0x5d6d88f78068 <col:9> 'char' lvalue VFIR 0x5d6d88f75e68 'L' 'char'
-| |   |   |   |-BinaryOperator 0x5d6d88f78180 <line:54:9, col:15> 'double' lvalue '='
-| |   |   |   | |-DeclRefExpr 0x5d6d88f780a0 <col:9> 'double' lvalue VFIR 0x5d6d88f74af8 'sum' 'double'
-| |   |   |   | `-BinaryOperator 0x5d6d88f78160 <col:13, col:15> 'double' '+'
-| |   |   |   |   |-ImplicitCastExpr 0x5d6d88f78148 <col:13> 'double' <IntegralToFloating>
-| |   |   |   |   | `-ImplicitCastExpr 0x5d6d88f78118 <col:13> 'int' <IntegralCast>
-| |   |   |   |   |   `-ImplicitCastExpr 0x5d6d88f78100 <col:13> 'char' <LValueToRValue>
-| |   |   |   |   |     `-DeclRefExpr 0x5d6d88f780c0 <col:13> 'char' lvalue VFIR 0x5d6d88f75e68 'L' 'char'
-| |   |   |   |   `-ImplicitCastExpr 0x5d6d88f78130 <col:15> 'double' <LValueToRValue>
-| |   |   |   |     `-DeclRefExpr 0x5d6d88f780e0 <col:15> 'double' lvalue VFIR 0x5d6d88f74af8 'sum' 'double'
-| |   |   |   |-IfStmt 0x5d6d88f78208 <line:55:9, col:22>
-| |   |   |   | |-ImplicitCastExpr 0x5d6d88f781d8 <col:13> 'bool' <IntegralToBoolean>
-| |   |   |   | | `-ImplicitCastExpr 0x5d6d88f781c0 <col:13> 'char' <LValueToRValue>
-| |   |   |   | |   `-DeclRefExpr 0x5d6d88f781a0 <col:13> 'char' lvalue VFIR 0x5d6d88f75e68 'L' 'char'
-| |   |   |   | `-GotoStmt 0x5d6d88f781f0 <col:17, col:22> 'start' 0x5d6d88f75ee8
-| |   |   |   `-DeclStmt 0x5d6d88f784f0 <line:56:7, col:44>
-| |   |   |     |-VFIRDecl 0x5d6d88f78248 <col:7, col:20> col:20 pnt5 'struct Point':'Point' callinit
-| |   |   |     | `-CXXConstructExpr 0x5d6d88f782b0 <col:20> 'struct Point':'Point' 'void () noexcept'
-| |   |   |     |-VFIRDecl 0x5d6d88f782f8 <col:7, col:25> col:25 pnt6 'struct Point':'Point' callinit
-| |   |   |     | `-CXXConstructExpr 0x5d6d88f78360 <col:25> 'struct Point':'Point' 'void () noexcept'
-| |   |   |     |-VFIRDecl 0x5d6d88f783a8 <col:7, col:30> col:30 pnt7 'struct Point':'Point' callinit
-| |   |   |     | `-CXXConstructExpr 0x5d6d88f78410 <col:30> 'struct Point':'Point' 'void () noexcept'
-| |   |   |     `-VFIRDecl 0x5d6d88f78460 <col:7, col:36> col:36 ptr_pnt8 'struct Point *'
-| |   |   |-BinaryOperator 0x5d6d88f78590 <line:58:7, col:10> 'float' lvalue '='
-| |   |   | |-DeclRefExpr 0x5d6d88f78538 <col:7> 'float' lvalue VFIR 0x5d6d88f75dd8 'PI' 'float'
-| |   |   | `-ImplicitCastExpr 0x5d6d88f78578 <col:10> 'float' <FloatingCast>
-| |   |   |   `-FloatingLiteral 0x5d6d88f78558 <col:10> 'double' 3.140000e+00
-| |   |   |-ReturnStmt 0x5d6d88f78628 <line:59:7, col:21>
-| |   |   | `-CStyleCastExpr 0x5d6d88f78600 <col:14, col:21> 'char *' <NoOp>
-| |   |   |   `-ImplicitCastExpr 0x5d6d88f785e8 <col:21> 'char *' <NullToPointer> part_of_explicit_cast
-| |   |   |     `-IntegerLiteral 0x5d6d88f785b0 <col:21> 'int' 0
-| |   |   |-CaseStmt 0x5d6d88f78678 <line:60:7, line:64:7>
-| |   |   | |-ConstantExpr 0x5d6d88f78658 <line:60:12> 'int'
-| |   |   | | |-value: Int 5
-| |   |   | | `-IntegerLiteral 0x5d6d88f78638 <col:12> 'int' 5
-| |   |   | `-CompoundStmt 0x5d6d88f78a40 <col:14, line:64:7>
-| |   |   |   |-DeclStmt 0x5d6d88f78720 <line:61:9, col:15>
-| |   |   |   | `-VFIRDecl 0x5d6d88f786b8 <col:9, col:13> col:13 zB 'int'
-| |   |   |   |-DeclStmt 0x5d6d88f78a20 <line:62:7, col:42>
-| |   |   |   | |-VFIRDecl 0x5d6d88f78758 <col:7, col:20> col:20 pnt9 'struct Point':'Point' callinit
-| |   |   |   | | `-CXXConstructExpr 0x5d6d88f787c0 <col:20> 'struct Point':'Point' 'void () noexcept'
-| |   |   |   | |-VFIRDecl 0x5d6d88f78808 <col:7, col:25> col:25 pnt10 'struct Point':'Point' callinit
-| |   |   |   | | `-CXXConstructExpr 0x5d6d88f78870 <col:25> 'struct Point':'Point' 'void () noexcept'
-| |   |   |   | |-VFIRDecl 0x5d6d88f788b8 <col:7, col:31> col:31 pnt11 'struct Point':'Point' callinit
-| |   |   |   | | `-CXXConstructExpr 0x5d6d88f78920 <col:31> 'struct Point':'Point' 'void () noexcept'
-| |   |   |   | `-VFIRDecl 0x5d6d88f78968 <col:7, col:37> col:37 pnt12 'struct Point':'Point' callinit
-| |   |   |   |   `-CXXConstructExpr 0x5d6d88f789d0 <col:37> 'struct Point':'Point' 'void () noexcept'
-| |   |   |   `-BreakStmt 0x5d6d88f78a38 <line:63:9>
-| |   |   |-CaseStmt 0x5d6d88f78aa8 <line:66:7, line:69:7>
-| |   |   | |-ConstantExpr 0x5d6d88f78a88 <line:66:12> 'int'
-| |   |   | | |-value: Int 6
-| |   |   | | `-IntegerLiteral 0x5d6d88f78a68 <col:12> 'int' 6
-| |   |   | `-CompoundStmt 0x5d6d88f78b70 <col:14, line:69:7>
-| |   |   |   |-DeclStmt 0x5d6d88f78b50 <line:67:9, col:18>
-| |   |   |   | `-VFIRDecl 0x5d6d88f78ae8 <col:9, col:13> col:13 uuuuu 'int'
-| |   |   |   `-BreakStmt 0x5d6d88f78b68 <line:68:9>
-| |   |   |-DefaultStmt 0x5d6d88f78ca0 <line:70:7, line:71:41>
-| |   |   | `-CompoundAssignOperator 0x5d6d88f78c70 <col:9, col:41> 'double' lvalue '+=' ComputeLHSTy='double' ComputeResultTy='double'
-| |   |   |   |-DeclRefExpr 0x5d6d88f78b90 <col:9> 'double' lvalue VFIR 0x5d6d88f74af8 'sum' 'double'
-| |   |   |   `-ImplicitCastExpr 0x5d6d88f78c58 <col:37, col:41> 'double' <IntegralToFloating>
-| |   |   |     `-BinaryOperator 0x5d6d88f78c38 <col:37, col:41> 'int' '*'
-| |   |   |       |-ImplicitCastExpr 0x5d6d88f78c08 <col:37> 'int' <IntegralCast>
-| |   |   |       | `-ImplicitCastExpr 0x5d6d88f78bf0 <col:37> 'short' <LValueToRValue>
-| |   |   |       |   `-DeclRefExpr 0x5d6d88f78bb0 <col:37> 'short' lvalue ParmVar 0x5d6d88f52770 'chr' 'short'
-| |   |   |       `-ImplicitCastExpr 0x5d6d88f78c20 <col:41> 'int' <LValueToRValue>
-| |   |   |         `-DeclRefExpr 0x5d6d88f78bd0 <col:41> 'int' lvalue ParmVar 0x5d6d88f526f0 'cnt' 'int'
-| |   |   `-ReturnStmt 0x5d6d88f78cf8 <line:72:9, col:17>
-| |   |     `-UnaryOperator 0x5d6d88f78ce0 <col:16, col:17> 'char *' prefix '&' cannot overflow
-| |   |       `-DeclRefExpr 0x5d6d88f78cc0 <col:17> 'char' lvalue VFIR 0x5d6d88f75e68 'L' 'char'
-| |   `-ReturnStmt 0x5d6d88f7a7c0 <line:74:5, col:12>
-| |     `-ImplicitCastExpr 0x5d6d88f7a7a8 <col:12> 'char *' <NullToPointer>
-| |       `-IntegerLiteral 0x5d6d88f7a788 <col:12> 'int' 0
-| |-CXXConstructorDecl 0x5d6d88f7ae28 <line:11:7> col:7 implicit used constexpr MyClass 'void () noexcept' inline default trivial
-| | `-CompoundStmt 0x5d6d88f7b278 <col:7>
-| |-CXXConstructorDecl 0x5d6d88f7af28 <col:7> col:7 implicit constexpr MyClass 'void (const MyClass &)' inline default trivial noexcept-unevaluated 0x5d6d88f7af28
-| | `-ParmVFIRDecl 0x5d6d88f7b038 <col:7> col:7 'const MyClass &'
-| `-CXXConstructorDecl 0x5d6d88f7b0e8 <col:7> col:7 implicit constexpr MyClass 'void (MyClass &&)' inline default trivial noexcept-unevaluated 0x5d6d88f7b0e8
-|   `-ParmVFIRDecl 0x5d6d88f7b1f8 <col:7> col:7 'MyClass &&'
-|-VFIRDecl 0x5d6d88f7a9c8 parent 0x5d6d88f52460 prev 0x5d6d88f52648 <line:78:1, col:19> col:14 ZERO 'int' cinit
-| `-IntegerLiteral 0x5d6d88f7aa80 <col:19> 'int' 0
-`-FunctionDecl 0x5d6d88f7aca0 <line:80:1, line:91:1> line:80:5 main 'int (int, char **)'
-  |-ParmVFIRDecl 0x5d6d88f7ab10 <col:10, col:14> col:14 argc 'int'
-  |-ParmVFIRDecl 0x5d6d88f7abc0 <col:20, col:27> col:27 argv 'char **'
-  `-CompoundStmt 0x5d6d88f71000 <col:32, line:91:1>
-    |-DeclStmt 0x5d6d88f7b370 <line:81:5, col:23>
-    | `-VFIRDecl 0x5d6d88f7ada8 <col:5, col:13> col:13 varMyClass 'MyClass' callinit
-    |   `-CXXConstructExpr 0x5d6d88f7b348 <col:13> 'MyClass' 'void () noexcept'
-    |-DeclStmt 0x5d6d88f7b480 <line:82:5, col:22>
-    | `-VFIRDecl 0x5d6d88f7b398 <col:5, col:18> col:18 used pnt1 'Point' static callinit
-    |   `-CXXConstructExpr 0x5d6d88f7b400 <col:18> 'Point' 'void () noexcept'
-    |-DeclStmt 0x5d6d88f7b548 <line:83:5, col:22>
-    | `-VFIRDecl 0x5d6d88f7b4b8 <col:5, col:18> col:18 used pnt2 'struct Point':'Point' callinit
-    |   `-CXXConstructExpr 0x5d6d88f7b520 <col:18> 'struct Point':'Point' 'void () noexcept'
-    |-CompoundStmt 0x5d6d88f70fa8 <line:84:5, line:88:5>
-    | |-DeclStmt 0x5d6d88f7b658 <line:85:9, col:34>
-    | | `-VFIRDecl 0x5d6d88f7b588 <col:9, col:30> col:24 ptr1 'struct Point *' cinit
-    | |   `-UnaryOperator 0x5d6d88f7b610 <col:29, col:30> 'Point *' prefix '&' cannot overflow
-    | |     `-DeclRefExpr 0x5d6d88f7b5f0 <col:30> 'Point' lvalue VFIR 0x5d6d88f7b398 'pnt1' 'Point'
-    | |-DeclStmt 0x5d6d88f70ec8 <line:86:9, col:34>
-    | | `-VFIRDecl 0x5d6d88f70e00 <col:9, col:30> col:24 ptr2 'struct Point *' cinit
-    | |   `-UnaryOperator 0x5d6d88f70e88 <col:29, col:30> 'struct Point *' prefix '&' cannot overflow
-    | |     `-DeclRefExpr 0x5d6d88f70e68 <col:30> 'struct Point':'Point' lvalue VFIR 0x5d6d88f7b4b8 'pnt2' 'struct Point':'Point'
-    | `-DeclStmt 0x5d6d88f70f90 <line:87:9, col:26>
-    |   `-VFIRDecl 0x5d6d88f70f00 <col:9, col:22> col:22 pnt3 'struct Point':'Point' callinit
-    |     `-CXXConstructExpr 0x5d6d88f70f68 <col:22> 'struct Point':'Point' 'void () noexcept'
-    `-ReturnStmt 0x5d6d88f70ff0 <line:90:3, col:10>
-      `-IntegerLiteral 0x5d6d88f70fd0 <col:10> 'int' 0
+| | |-MoveAssignment
+| | `-Destructor non_trivial user_declared
+| |-CXXRecordDecl 0x57cf05d3d278 <col:1, col:7> col:7 implicit referenced class MyClass
+| |-AccessSpecDecl 0x57cf05d3d308 <line:12:1, col:7> col:1 public
+| |-VarDecl 0x57cf05d3d348 <line:13:5, col:16> col:16 ZERO 'int' static
+| |-AccessSpecDecl 0x57cf05d3d3b0 <line:14:1, col:7> col:1 public
+| |-FieldDecl 0x57cf05d3d3f0 <line:15:5, col:12> col:12 m_d1 'double'
+| |-FieldDecl 0x57cf05d3d458 <line:16:5, col:9> col:9 m_n2 'int'
+| |-CXXConstructorDecl 0x57cf05d3d538 <line:18:5, col:16> col:5 used MyClass 'void ()' implicit-inline
+| | `-CompoundStmt 0x57cf05d5c010 <col:15, col:16>
+| |-CXXConstructorDecl 0x57cf05d3d748 <line:20:5, line:24:5> line:20:5 MyClass 'void (float, int)' implicit-inline
+| | |-ParmVarDecl 0x57cf05d3d5f8 <col:13, col:19> col:19 used f1 'float'
+| | |-ParmVarDecl 0x57cf05d3d678 <col:23, col:27> col:27 used n1 'int'
+| | |-CXXCtorInitializer Field 0x57cf05d3d3f0 'm_d1' 'double'
+| | | `-ImplicitCastExpr 0x57cf05d5c078 <line:21:11> 'double' <FloatingCast>
+| | |   `-ImplicitCastExpr 0x57cf05d5c060 <col:11> 'float' <LValueToRValue>
+| | |     `-DeclRefExpr 0x57cf05d5c020 <col:11> 'float' lvalue ParmVar 0x57cf05d3d5f8 'f1' 'float'
+| | |-CXXCtorInitializer Field 0x57cf05d3d458 'm_n2' 'int'
+| | | `-ImplicitCastExpr 0x57cf05d5c0f0 <col:20> 'int' <LValueToRValue>
+| | |   `-DeclRefExpr 0x57cf05d5c0b0 <col:20> 'int' lvalue ParmVar 0x57cf05d3d678 'n1' 'int'
+| | `-CompoundStmt 0x57cf05d5c258 <line:22:5, line:24:5>
+| |   `-DeclStmt 0x57cf05d5c240 <line:23:9, col:21>
+| |     `-VarDecl 0x57cf05d5c148 <col:9, col:19> col:14 c3 'char' cinit
+| |       `-ImplicitCastExpr 0x57cf05d5c228 <col:17, col:19> 'char' <IntegralCast>
+| |         `-BinaryOperator 0x57cf05d5c208 <col:17, col:19> 'int' '+'
+| |           |-IntegerLiteral 0x57cf05d5c1b0 <col:17> 'int' 1
+| |           `-ImplicitCastExpr 0x57cf05d5c1f0 <col:19> 'int' <LValueToRValue>
+| |             `-DeclRefExpr 0x57cf05d5c1d0 <col:19> 'int' lvalue ParmVar 0x57cf05d3d678 'n1' 'int'
+| |-CXXDestructorDecl 0x57cf05d3d858 <line:26:5, line:39:5> line:26:5 used ~MyClass 'void () noexcept' implicit-inline
+| | `-CompoundStmt 0x57cf05d61d60 <col:15, line:39:5>
+| |   |-DeclStmt 0x57cf05d5c438 <line:27:9, col:18>
+| |   | |-VarDecl 0x57cf05d5c2b0 <col:9, col:13> col:13 x 'int'
+| |   | |-VarDecl 0x57cf05d5c330 <col:9, col:15> col:15 y 'int'
+| |   | `-VarDecl 0x57cf05d5c3b0 <col:9, col:17> col:17 z 'int'
+| |   |-DeclStmt 0x57cf05d5ca60 <line:28:9, col:30>
+| |   | `-VarDecl 0x57cf05d5c460 <col:9, col:20> col:20 userEntity 'UserEntity' callinit
+| |   |   `-CXXConstructExpr 0x57cf05d5ca38 <col:20> 'UserEntity' 'void () noexcept'
+| |   |-DeclStmt 0x57cf05d5edb0 <line:30:9, col:21>
+| |   | `-VarDecl 0x57cf05d5ca88 <col:9, col:15> col:15 used point0 'Point' callinit
+| |   |   `-CXXConstructExpr 0x57cf05d5ed88 <col:15> 'Point' 'void () noexcept'
+| |   |-DeclStmt 0x57cf05d61be8 <line:31:9, line:36:10>
+| |   | `-VarDecl 0x57cf05d5ee40 <line:31:9, line:36:9> line:31:14 used fn_point '(lambda at /fridaAnlzAp/clang-voidFnEndInsertRet/test_in/test_main.cpp:31:25)':'(lambda at /fridaAnlzAp/clang-voidFnEndInsertRet/test_in/test_main.cpp:31:25)' cinit
+| |   |   `-ExprWithCleanups 0x57cf05d61bd0 <col:25, line:36:9> '(lambda at /fridaAnlzAp/clang-voidFnEndInsertRet/test_in/test_main.cpp:31:25)':'(lambda at /fridaAnlzAp/clang-voidFnEndInsertRet/test_in/test_main.cpp:31:25)'
+| |   |     `-CXXConstructExpr 0x57cf05d61ba0 <line:31:25, line:36:9> '(lambda at /fridaAnlzAp/clang-voidFnEndInsertRet/test_in/test_main.cpp:31:25)':'(lambda at /fridaAnlzAp/clang-voidFnEndInsertRet/test_in/test_main.cpp:31:25)' 'void ((lambda at /fridaAnlzAp/clang-voidFnEndInsertRet/test_in/test_main.cpp:31:25) &&) noexcept' elidable
+| |   |       `-MaterializeTemporaryExpr 0x57cf05d61a28 <line:31:25, line:36:9> '(lambda at /fridaAnlzAp/clang-voidFnEndInsertRet/test_in/test_main.cpp:31:25)' xvalue
+| |   |         `-LambdaExpr 0x57cf05d614a0 <line:31:25, line:36:9> '(lambda at /fridaAnlzAp/clang-voidFnEndInsertRet/test_in/test_main.cpp:31:25)'
+| |   |           |-CXXRecordDecl 0x57cf05d5efa8 <line:31:25> col:25 implicit class definition
+| |   |           | |-DefinitionData lambda pass_in_registers empty standard_layout trivially_copyable can_const_default_init
+| |   |           | | |-DefaultConstructor defaulted_is_constexpr
+| |   |           | | |-CopyConstructor simple trivial has_const_param implicit_has_const_param
+| |   |           | | |-MoveConstructor exists simple trivial
+| |   |           | | |-CopyAssignment trivial has_const_param needs_implicit implicit_has_const_param
+| |   |           | | |-MoveAssignment
+| |   |           | | `-Destructor simple irrelevant trivial
+| |   |           | |-CXXMethodDecl 0x57cf05d5f0f0 <col:46, line:36:9> line:31:25 used operator() 'double (const Point &) const' inline
+| |   |           | | |-ParmVarDecl 0x57cf05d5eeb8 <col:28, col:41> col:41 used point 'const Point &'
+| |   |           | | `-CompoundStmt 0x57cf05d5f660 <col:48, line:36:9>
+| |   |           | |   `-IfStmt 0x57cf05d5f630 <line:32:13, line:35:24> has_else
+| |   |           | |     |-BinaryOperator 0x57cf05d5f290 <line:32:16, col:30> 'bool' '>'
+| |   |           | |     | |-ImplicitCastExpr 0x57cf05d5f278 <col:16, col:22> 'double' <FloatingCast>
+| |   |           | |     | | `-ImplicitCastExpr 0x57cf05d5f248 <col:16, col:22> 'float' <LValueToRValue>
+| |   |           | |     | |   `-MemberExpr 0x57cf05d5f1c8 <col:16, col:22> 'const float' lvalue .x 0x57cf05d3cd10
+| |   |           | |     | |     `-DeclRefExpr 0x57cf05d5f1a8 <col:16> 'const Point' lvalue ParmVar 0x57cf05d5eeb8 'point' 'const Point &'
+| |   |           | |     | `-ImplicitCastExpr 0x57cf05d5f260 <col:24, col:30> 'double' <LValueToRValue>
+| |   |           | |     |   `-MemberExpr 0x57cf05d5f218 <col:24, col:30> 'const double' lvalue .y 0x57cf05d3cd78
+| |   |           | |     |     `-DeclRefExpr 0x57cf05d5f1f8 <col:24> 'const Point' lvalue ParmVar 0x57cf05d5eeb8 'point' 'const Point &'
+| |   |           | |     |-ReturnStmt 0x57cf05d5f530 <line:33:17, col:38>
+| |   |           | |     | `-BinaryOperator 0x57cf05d5f398 <col:24, col:38> 'double' '+'
+| |   |           | |     |   |-ImplicitCastExpr 0x57cf05d5f380 <col:24, col:30> 'double' <FloatingCast>
+| |   |           | |     |   | `-ImplicitCastExpr 0x57cf05d5f350 <col:24, col:30> 'float' <LValueToRValue>
+| |   |           | |     |   |   `-MemberExpr 0x57cf05d5f2d0 <col:24, col:30> 'const float' lvalue .x 0x57cf05d3cd10
+| |   |           | |     |   |     `-DeclRefExpr 0x57cf05d5f2b0 <col:24> 'const Point' lvalue ParmVar 0x57cf05d5eeb8 'point' 'const Point &'
+| |   |           | |     |   `-ImplicitCastExpr 0x57cf05d5f368 <col:32, col:38> 'double' <LValueToRValue>
+| |   |           | |     |     `-MemberExpr 0x57cf05d5f320 <col:32, col:38> 'const double' lvalue .y 0x57cf05d3cd78
+| |   |           | |     |       `-DeclRefExpr 0x57cf05d5f300 <col:32> 'const Point' lvalue ParmVar 0x57cf05d5eeb8 'point' 'const Point &'
+| |   |           | |     `-ReturnStmt 0x57cf05d5f620 <line:35:17, col:24>
+| |   |           | |       `-FloatingLiteral 0x57cf05d5f540 <col:24> 'double' 1.000000e-01
+| |   |           | |-CXXConversionDecl 0x57cf05d5f8f0 <line:31:25, line:36:9> line:31:25 implicit operator double (*)(const Point &) 'double (*() const noexcept)(const Point &)' inline
+| |   |           | |-CXXMethodDecl 0x57cf05d613e0 <col:25, line:36:9> line:31:25 implicit __invoke 'double (const Point &)' static inline
+| |   |           | | `-ParmVarDecl 0x57cf05d5f888 <col:28, col:41> col:41 point 'const Point &'
+| |   |           | |-CXXDestructorDecl 0x57cf05d614c8 <col:25> col:25 implicit referenced ~ 'void () noexcept' inline default trivial
+| |   |           | |-CXXConstructorDecl 0x57cf05d616e0 <col:25> col:25 implicit constexpr  'void (const (lambda at /fridaAnlzAp/clang-voidFnEndInsertRet/test_in/test_main.cpp:31:25) &)' inline default trivial noexcept-unevaluated 0x57cf05d616e0
+| |   |           | | `-ParmVarDecl 0x57cf05d617f8 <col:25> col:25 'const (lambda at /fridaAnlzAp/clang-voidFnEndInsertRet/test_in/test_main.cpp:31:25) &'
+| |   |           | `-CXXConstructorDecl 0x57cf05d61898 <col:25> col:25 implicit used constexpr  'void ((lambda at /fridaAnlzAp/clang-voidFnEndInsertRet/test_in/test_main.cpp:31:25) &&) noexcept' inline default trivial
+| |   |           |   |-ParmVarDecl 0x57cf05d619a8 <col:25> col:25 '(lambda at /fridaAnlzAp/clang-voidFnEndInsertRet/test_in/test_main.cpp:31:25) &&'
+| |   |           |   `-CompoundStmt 0x57cf05d61b90 <col:25>
+| |   |           `-CompoundStmt 0x57cf05d5f660 <col:48, line:36:9>
+| |   |             `-IfStmt 0x57cf05d5f630 <line:32:13, line:35:24> has_else
+| |   |               |-BinaryOperator 0x57cf05d5f290 <line:32:16, col:30> 'bool' '>'
+| |   |               | |-ImplicitCastExpr 0x57cf05d5f278 <col:16, col:22> 'double' <FloatingCast>
+| |   |               | | `-ImplicitCastExpr 0x57cf05d5f248 <col:16, col:22> 'float' <LValueToRValue>
+| |   |               | |   `-MemberExpr 0x57cf05d5f1c8 <col:16, col:22> 'const float' lvalue .x 0x57cf05d3cd10
+| |   |               | |     `-DeclRefExpr 0x57cf05d5f1a8 <col:16> 'const Point' lvalue ParmVar 0x57cf05d5eeb8 'point' 'const Point &'
+| |   |               | `-ImplicitCastExpr 0x57cf05d5f260 <col:24, col:30> 'double' <LValueToRValue>
+| |   |               |   `-MemberExpr 0x57cf05d5f218 <col:24, col:30> 'const double' lvalue .y 0x57cf05d3cd78
+| |   |               |     `-DeclRefExpr 0x57cf05d5f1f8 <col:24> 'const Point' lvalue ParmVar 0x57cf05d5eeb8 'point' 'const Point &'
+| |   |               |-ReturnStmt 0x57cf05d5f530 <line:33:17, col:38>
+| |   |               | `-BinaryOperator 0x57cf05d5f398 <col:24, col:38> 'double' '+'
+| |   |               |   |-ImplicitCastExpr 0x57cf05d5f380 <col:24, col:30> 'double' <FloatingCast>
+| |   |               |   | `-ImplicitCastExpr 0x57cf05d5f350 <col:24, col:30> 'float' <LValueToRValue>
+| |   |               |   |   `-MemberExpr 0x57cf05d5f2d0 <col:24, col:30> 'const float' lvalue .x 0x57cf05d3cd10
+| |   |               |   |     `-DeclRefExpr 0x57cf05d5f2b0 <col:24> 'const Point' lvalue ParmVar 0x57cf05d5eeb8 'point' 'const Point &'
+| |   |               |   `-ImplicitCastExpr 0x57cf05d5f368 <col:32, col:38> 'double' <LValueToRValue>
+| |   |               |     `-MemberExpr 0x57cf05d5f320 <col:32, col:38> 'const double' lvalue .y 0x57cf05d3cd78
+| |   |               |       `-DeclRefExpr 0x57cf05d5f300 <col:32> 'const Point' lvalue ParmVar 0x57cf05d5eeb8 'point' 'const Point &'
+| |   |               `-ReturnStmt 0x57cf05d5f620 <line:35:17, col:24>
+| |   |                 `-FloatingLiteral 0x57cf05d5f540 <col:24> 'double' 1.000000e-01
+| |   `-CXXOperatorCallExpr 0x57cf05d61d28 <line:38:9, col:24> 'double':'double' '()'
+| |     |-ImplicitCastExpr 0x57cf05d61cb8 <col:17, col:24> 'double (*)(const Point &) const' <FunctionToPointerDecay>
+| |     | `-DeclRefExpr 0x57cf05d61c40 <col:17, col:24> 'double (const Point &) const' lvalue CXXMethod 0x57cf05d5f0f0 'operator()' 'double (const Point &) const'
+| |     |-ImplicitCastExpr 0x57cf05d61cf8 <col:9> 'const (lambda at /fridaAnlzAp/clang-voidFnEndInsertRet/test_in/test_main.cpp:31:25)' lvalue <NoOp>
+| |     | `-DeclRefExpr 0x57cf05d61c00 <col:9> '(lambda at /fridaAnlzAp/clang-voidFnEndInsertRet/test_in/test_main.cpp:31:25)':'(lambda at /fridaAnlzAp/clang-voidFnEndInsertRet/test_in/test_main.cpp:31:25)' lvalue Var 0x57cf05d5ee40 'fn_point' '(lambda at /fridaAnlzAp/clang-voidFnEndInsertRet/test_in/test_main.cpp:31:25)':'(lambda at /fridaAnlzAp/clang-voidFnEndInsertRet/test_in/test_main.cpp:31:25)'
+| |     `-ImplicitCastExpr 0x57cf05d61d10 <col:18> 'const Point' lvalue <NoOp>
+| |       `-DeclRefExpr 0x57cf05d61c20 <col:18> 'Point' lvalue Var 0x57cf05d5ca88 'point0' 'Point'
+| |-CXXMethodDecl 0x57cf05d5bde8 <line:41:3, line:42:3> line:41:8 voidDemo 'void (int, short)' implicit-inline
+| | |-ParmVarDecl 0x57cf05d3d958 <col:17, col:21> col:21 cnt 'int'
+| | |-ParmVarDecl 0x57cf05d5bd10 <col:26, col:32> col:32 chr 'short'
+| | `-CompoundStmt 0x57cf05d61de0 <col:36, line:42:3>
+| |-CXXMethodDecl 0x57cf05d5bf68 <line:44:5, line:48:5> line:44:10 voidDemo2 'void (UserEntity)' implicit-inline
+| | |-ParmVarDecl 0x57cf05d5bea8 <col:20, col:31> col:31 userEntity 'UserEntity'
+| | `-CompoundStmt 0x57cf05d61e48 <col:42, line:48:5>
+| |   `-IfStmt 0x57cf05d61e28 <line:45:7, line:47:7>
+| |     |-CXXBoolLiteralExpr 0x57cf05d61df0 <line:45:10> 'bool' true
+| |     `-CompoundStmt 0x57cf05d61e10 <col:15, line:47:7>
+| |       `-ReturnStmt 0x57cf05d61e00 <line:46:11>
+| `-CXXConstructorDecl 0x57cf05d63d58 <line:11:7> col:7 implicit constexpr MyClass 'void (const MyClass &)' inline default trivial noexcept-unevaluated 0x57cf05d63d58
+|   `-ParmVarDecl 0x57cf05d63e68 <col:7> col:7 'const MyClass &'
+|-VarDecl 0x57cf05d61e98 parent 0x57cf05d3d160 prev 0x57cf05d3d348 <line:54:1, col:19> col:14 ZERO 'int' cinit
+| `-IntegerLiteral 0x57cf05d61f50 <col:19> 'int' 0
+|-FunctionDecl 0x57cf05d61fe8 <line:56:1, line:60:1> line:56:6 voidDemo3 'void ()'
+| `-CompoundStmt 0x57cf05d621c0 <col:17, line:60:1>
+|   |-DeclStmt 0x57cf05d62170 <line:57:5, col:12>
+|   | `-VarDecl 0x57cf05d620e8 <col:5, col:11> col:9 used k 'int' cinit
+|   |   `-IntegerLiteral 0x57cf05d62150 <col:11> 'int' 0
+|   `-UnaryOperator 0x57cf05d621a8 <line:58:5, col:6> 'int' postfix '++'
+|     `-DeclRefExpr 0x57cf05d62188 <col:5> 'int' lvalue Var 0x57cf05d620e8 'k' 'int'
+`-FunctionDecl 0x57cf05d63c00 <line:61:1, line:72:2> line:61:5 main 'int (int, char **)'
+  |-ParmVarDecl 0x57cf05d621f8 <col:10, col:14> col:14 argc 'int'
+  |-ParmVarDecl 0x57cf05d622a0 <col:20, col:27> col:27 argv 'char **'
+  `-CompoundStmt 0x57cf05d64570 <col:32, line:72:2>
+    |-DeclStmt 0x57cf05d63fe0 <line:62:5, col:23>
+    | `-VarDecl 0x57cf05d63cc0 <col:5, col:13> col:13 varMyClass 'MyClass' callinit destroyed
+    |   `-CXXConstructExpr 0x57cf05d63fb8 <col:13> 'MyClass' 'void ()'
+    |-DeclStmt 0x57cf05d640f0 <line:63:5, col:22>
+    | `-VarDecl 0x57cf05d64008 <col:5, col:18> col:18 used pnt1 'Point' static callinit
+    |   `-CXXConstructExpr 0x57cf05d64070 <col:18> 'Point' 'void () noexcept'
+    |-DeclStmt 0x57cf05d64220 <line:64:5, col:22>
+    | `-VarDecl 0x57cf05d64160 <col:5, col:18> col:18 used pnt2 'struct Point':'Point' callinit
+    |   `-CXXConstructExpr 0x57cf05d641f8 <col:18> 'struct Point':'Point' 'void () noexcept'
+    |-CompoundStmt 0x57cf05d64518 <line:65:5, line:69:5>
+    | |-DeclStmt 0x57cf05d64328 <line:66:9, col:34>
+    | | `-VarDecl 0x57cf05d64260 <col:9, col:30> col:24 ptr1 'struct Point *' cinit
+    | |   `-UnaryOperator 0x57cf05d642e8 <col:29, col:30> 'Point *' prefix '&' cannot overflow
+    | |     `-DeclRefExpr 0x57cf05d642c8 <col:30> 'Point' lvalue Var 0x57cf05d64008 'pnt1' 'Point'
+    | |-DeclStmt 0x57cf05d64438 <line:67:9, col:34>
+    | | `-VarDecl 0x57cf05d64368 <col:9, col:30> col:24 ptr2 'struct Point *' cinit
+    | |   `-UnaryOperator 0x57cf05d643f0 <col:29, col:30> 'struct Point *' prefix '&' cannot overflow
+    | |     `-DeclRefExpr 0x57cf05d643d0 <col:30> 'struct Point':'Point' lvalue Var 0x57cf05d64160 'pnt2' 'struct Point':'Point'
+    | `-DeclStmt 0x57cf05d64500 <line:68:9, col:26>
+    |   `-VarDecl 0x57cf05d64470 <col:9, col:22> col:22 pnt3 'struct Point':'Point' callinit
+    |     `-CXXConstructExpr 0x57cf05d644d8 <col:22> 'struct Point':'Point' 'void () noexcept'
+    `-ReturnStmt 0x57cf05d64560 <line:71:3, col:10>
+      `-IntegerLiteral 0x57cf05d64540 <col:10> 'int' 0
