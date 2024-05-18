@@ -7,3 +7,9 @@ clang -Xclang -ast-dump -fsyntax-only   /fridaAnlzAp/clang-voidFnEndInsertRet/te
 #  文本输出，方便保存
 clang -Xclang -ast-dump -fsyntax-only  -fno-color-diagnostics /fridaAnlzAp/clang-voidFnEndInsertRet/test_in/test_main.cpp   | tee /fridaAnlzAp/clang-voidFnEndInsertRet/test_in/test_main.cpp.syntax_tree.txt
 ```
+
+
+猜测 `clang -Xclang -ast-dump` == `clang-check --ast-dump` 
+```shell
+clang-check --ast-dump        /fridaAnlzAp/clang-voidFnEndInsertRet/test_in/test_main.cpp
+```

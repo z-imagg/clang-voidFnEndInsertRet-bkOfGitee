@@ -1,3 +1,4 @@
+#生成本文的命令为: clang -Xclang -ast-dump -fsyntax-only  -fno-color-diagnostics /fridaAnlzAp/clang-voidFnEndInsertRet/test_in/test_main.cpp  #猜测 `clang -Xclang -ast-dump` == `clang-check --ast-dump` 
 TranslationUnitDecl 0x57cf05cf6758 <<invalid sloc>> <invalid sloc>
 |-TypedefDecl 0x57cf05cf6fc0 <<invalid sloc>> <invalid sloc> implicit __int128_t '__int128'
 | `-BuiltinType 0x57cf05cf6d20 '__int128'
