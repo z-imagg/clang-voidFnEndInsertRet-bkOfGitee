@@ -55,7 +55,9 @@ bool FnVst::TraverseCompoundStmt(CompoundStmt *compoundStmt  ){
 
   Stmt *endStmt = compoundStmt->body_back();
 
-    const SourceLocation &compoundStmtRBracLoc = compoundStmt->getRBracLoc();
+  const SourceLocation &compoundStmtLBracLoc = compoundStmt->getLBracLoc();
+  const SourceLocation &compoundStmtRBracLoc = compoundStmt->getRBracLoc();
+
 
   // 块尾语句是不是return
   bool compoundEndStmtIsReturn=Util::isReturnStmtClass(endStmt);
@@ -63,18 +65,25 @@ bool FnVst::TraverseCompoundStmt(CompoundStmt *compoundStmt  ){
   //若 有 栈变量释放 且 未曾插入过 释放语句，则插入释放语句
   if(!compoundEndStmtIsReturn){
 
-      LocId compoundStmtRBracLocId=LocId::buildFor(filePath,  compoundStmtRBracLoc, SM);
+    bool parentKindIsCXXConstructorDecl= Util::parentKindIsSame(Ctx, compoundStmt, ASTNodeKind::getFromNodeKind<CXXConstructorDecl>());
+    bool compoundStmtLRBrace_inSameLine=Util::isEqSrcLocLineNum(SM,compoundStmtLBracLoc,compoundStmtRBracLoc);
+    //若是构造方法、且方法体左花括号和右花括号在同一行，则新插入的return语句前有换行
+    bool withNewLinePrefix= parentKindIsCXXConstructorDecl && compoundStmtLRBrace_inSameLine;
+
+    LocId compoundStmtRBracLocId=LocId::buildFor(filePath,  compoundStmtRBracLoc, SM);
   ///1.7  在上面算出的位置处, 插入释放语句
     bool insertResult=insertBefore_Return(
             compoundStmtRBracLocId,
-            compoundStmtRBracLoc);
+            compoundStmtRBracLoc,
+            withNewLinePrefix);
 
   }
 
   return true;
 }
 
-bool FnVst::insertBefore_Return(LocId cmpndStmRBrcLocId, SourceLocation cmpndStmRBrcLoc  ){
+
+bool FnVst::insertBefore_Return(LocId cmpndStmRBrcLocId, SourceLocation cmpndStmRBrcLoc ,bool withNewLinePrefix ){
     std::string verbose="";
     //环境变量 clangPlgVerbose_voidFnEndInsertRet 控制 是否在注释中输出完整路径_行号_列号
     if(Util::envVarEq("clangPlgVerbose_voidFnEndInsertRet","true")){
@@ -83,7 +92,8 @@ bool FnVst::insertBefore_Return(LocId cmpndStmRBrcLocId, SourceLocation cmpndStm
 
     //region 构造插入语句
     std::string cStr_destroy=fmt::format(
-            "return; /* voidFnEndInsertRet: {}*/",
+            "{}return; /* voidFnEndInsertRet: {}*/",
+            withNewLinePrefix?"\n":"",
             verbose
     );
     llvm::StringRef strRef_destroy(cStr_destroy);

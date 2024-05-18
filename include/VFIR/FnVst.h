@@ -34,7 +34,7 @@ public:
 
     }
 
-    bool insertBefore_Return(LocId cmpndStmRBrcLocId, SourceLocation cmpndStmRBrcLoc  );
+    bool insertBefore_Return(LocId cmpndStmRBrcLocId, SourceLocation cmpndStmRBrcLoc,bool withNewLinePrefix  );
     bool TraverseCompoundStmt(CompoundStmt *compoundStmt  );
 
 
