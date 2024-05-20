@@ -48,8 +48,19 @@ bool FnVst::TraverseCompoundStmt(CompoundStmt *compoundStmt  ){
         return true;
     }
 /////////////////////对当前节点compoundStmt做 自定义处理
-
-
+  Util::printStmt(CtxRef,CI,"t1","",compoundStmt,true);
+  const ASTNodeKind &parentNodeKind = parent.getNodeKind();
+  if(parentNodeKind.isBaseOf(ASTNodeKind::getFromNodeKind<FunctionDecl>())){
+    const FunctionDecl *functionDecl = parent.get<FunctionDecl>();
+    const QualType &declaredReturnType = functionDecl->getDeclaredReturnType();
+    const Type *typePtr = declaredReturnType.getTypePtr();
+    assert(typePtr!=NULL);
+    bool isVoidType = typePtr->isVoidType();
+    if(!isVoidType){
+      //若本函数返回类型不是void, 则直接返回
+      return true;
+    }
+  }
   ///1.2 return语句插入位置是 组合语句 右花括号} 前
   SourceLocation insertLoc=compoundStmt->getRBracLoc();
 
