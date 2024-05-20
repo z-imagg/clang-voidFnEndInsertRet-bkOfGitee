@@ -11,6 +11,16 @@ void voidDemo3(){
     k++;
 
 }
+
+char* charPtrFunc04(){
+  if(1){
+    char sex;
+    return &sex;
+  }else{
+    char ch;
+    return &ch;
+  }
+}
 int main(int argc, char** argv){
     struct Point pnt1;
     struct Point pnt2;
