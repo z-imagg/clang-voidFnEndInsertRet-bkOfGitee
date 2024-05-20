@@ -48,7 +48,7 @@ bool FnVst::TraverseCompoundStmt(CompoundStmt *compoundStmt  ){
         return true;
     }
 /////////////////////对当前节点compoundStmt做 自定义处理
-  Util::printStmt(CtxRef,CI,"t1","",compoundStmt,true);
+//  Util::printStmt(CtxRef,CI,"t1","",compoundStmt,true);
   const ASTNodeKind &parentNodeKind = parent.getNodeKind();
   if(parentNodeKind.isBaseOf(ASTNodeKind::getFromNodeKind<FunctionDecl>())){
     const FunctionDecl *functionDecl = parent.get<FunctionDecl>();
