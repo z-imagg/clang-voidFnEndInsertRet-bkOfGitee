@@ -48,7 +48,7 @@ bool FnVst::TraverseCompoundStmt(CompoundStmt *compoundStmt  ){
         return true;
     }
 /////////////////////对当前节点compoundStmt做 自定义处理
-
+  Util::printStmt(CtxRef,CI,"t1","",compoundStmt,true);
 
   ///1.2 return语句插入位置是 组合语句 右花括号} 前
   SourceLocation insertLoc=compoundStmt->getRBracLoc();

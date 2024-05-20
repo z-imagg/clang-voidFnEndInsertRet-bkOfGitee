@@ -6,11 +6,6 @@ struct Point{
     double y;
 };
 
-void voidDemo3(){
-    int k=0;
-    k++;
-
-}
 
 char* charPtrFunc04(){
   if(1){
@@ -21,14 +16,3 @@ char* charPtrFunc04(){
     return &ch;
   }
 }
-int main(int argc, char** argv){
-    struct Point pnt1;
-    struct Point pnt2;
-    {
-        struct Point * ptr1=&pnt1;
-        struct Point * ptr2=&pnt2;
-        struct Point pnt3;
-    }
-
-  return 0;
- }
