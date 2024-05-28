@@ -12,6 +12,12 @@ void voidDemo3(){
 
 }
 
+int intDemo4(){ return 9; }
+
+
+void voidDemo5(){ return ; }
+
+
 char* charPtrFunc04(){
   if(1){
     char sex;
