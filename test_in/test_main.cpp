@@ -7,7 +7,15 @@ struct Point{
     double y;
 };
 class UserEntity{};
-class ScoreRelation{};
+class ScoreRelation{
+protected:
+  float calcScoreSum(int cnt, char t);
+};
+float ScoreRelation::calcScoreSum(int cnt, char t){
+    int dummy;
+    return 3.9*cnt+t=='z'?5:-5;
+}
+
 class MyClass {
 public:
     static int ZERO;
