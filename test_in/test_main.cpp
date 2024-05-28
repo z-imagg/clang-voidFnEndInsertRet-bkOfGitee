@@ -36,6 +36,13 @@ public:
         };
 
         fn_point(point0);
+
+
+        auto fn_pnt = [](const Point& pnt) {
+            return pnt.x+pnt.y;
+        };
+        fn_pnt(point0);
+        
     }
 
   void voidDemo(int cnt, short chr){
