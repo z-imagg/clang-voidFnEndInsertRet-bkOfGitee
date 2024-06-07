@@ -5,6 +5,10 @@
 #【术语】
 #【备注】
 
+#使用真实编译器(撤销cmd-wrap)
+CmdWrap_Rm_F="/app/cmd-wrap/script/remove_interceptor.sh"
+[[ -f $CmdWrap_Rm_F ]] && bash $CmdWrap_Rm_F
+
 source /app/bash-simplify/_importBSFn.sh
 _importBSFn "assertFileExisted.sh"
 _importBSFn "cdCurScriptDir.sh"
