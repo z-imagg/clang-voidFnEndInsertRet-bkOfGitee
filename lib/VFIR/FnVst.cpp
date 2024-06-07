@@ -50,7 +50,9 @@ bool FnVst::TraverseCompoundStmt(CompoundStmt *compoundStmt  ){
 /////////////////////对当前节点compoundStmt做 自定义处理
 //  Util::printStmt(CtxRef,CI,"t1","",compoundStmt,true);
   const ASTNodeKind &parentNodeKind = parent.getNodeKind();
-  if(parentNodeKind.isBaseOf(ASTNodeKind::getFromNodeKind<FunctionDecl>())){
+  //如果是当前块语句的父节点 是 FunctionDecl的子类
+  //  FunctionDecl的子类 == 普通函数、c++成员函数、c++构造函数、c++析构函数
+  if(ASTNodeKind::getFromNodeKind<FunctionDecl>() .isBaseOf(parentNodeKind)){
     const FunctionDecl *functionDecl = parent.get<FunctionDecl>();
     const QualType &declaredReturnType = functionDecl->getDeclaredReturnType();
     const Type *typePtr = declaredReturnType.getTypePtr();
