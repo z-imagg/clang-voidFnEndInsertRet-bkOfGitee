@@ -8,6 +8,13 @@
 bool VFIRAstCnsm::mainFileProcessed=false;
 
 
+//从 /fridaAnlzAp/clang-var/base_home/impl/base/ASTContextUtil.cpp  复制而来的, 因为用新base_home改造两太大了, 先凑合着用吧
+bool  _useCxx(ASTContext *Ctx){
+  const LangOptions &langOpts = Ctx->getLangOpts();
+  bool _useCXX = (langOpts.CPlusPlus == 1);
+  return _useCXX;
+}
+
  void VFIRAstCnsm::HandleTranslationUnit(ASTContext &Ctx) {
      ///region 在此编译进程内, 跳过已处理的mainFile, 避免重复处理
      //被上层多次调用 本方法HandleTranslationUnit，后续的调用不再进入实际处理
@@ -94,8 +101,12 @@ reinterpret_cast<uintptr_t> ( (fnVst.mRewriter_ptr.get()) ) ) << std::endl;
    //endregion
 
    ///region 3. 插入 已处理 注释标记 到主文件第一个声明前
+     // 计算开头的插入语句文本
+     bool useCxx=_useCxx(&Ctx);
+     std::string stmt_txt=(useCxx?c.PrgMsg_IncRuntime_Cxx:c.PrgMsg_IncRuntime_C00);
+     // 执行插入 开头语句文本
      bool insertResult;
-     Util::insertIncludeToFileStart(c.PrgMsgStmt_funcIdAsmIns, mainFileId, SM, fnVst.mRewriter_ptr, insertResult);//此时  insertVst.mRewriter.getRewriteBufferFor(mainFileId)  != NULL， 可以做插入
+     Util::insertIncludeToFileStart(stmt_txt, mainFileId, SM, fnVst.mRewriter_ptr, insertResult);//此时  insertVst.mRewriter.getRewriteBufferFor(mainFileId)  != NULL， 可以做插入
      std::string msg=fmt::format("插入'#pragma 消息'到文件{},对mainFileId:{},结果:{}\n",filePath,mainFileId.getHashValue(),insertResult);
      std::cout<< msg ;
 
